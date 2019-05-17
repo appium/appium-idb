@@ -1,0 +1,49 @@
+{
+  "name": "appium-idb",
+  "description": "Description goes here.",
+  "keywords": [
+    "appium"
+  ],
+  "version": "0.0.0",
+  "author": "appium",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appium/appium-idb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/appium/appium-idb/issues"
+  },
+  "engines": [
+    "node"
+  ],
+  "main": "./build/index.js",
+  "bin": {},
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "build/index.js",
+    "build/lib"
+  ],
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "bluebird": "^3.1.1",
+    "source-map-support": "^0.5.5",
+  },
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp once",
+    "watch": "gulp watch"
+  },
+  "devDependencies": {
+    "appium-gulp-plugins": "^4.0.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "eslint-config-appium": "^4.0.1",
+    "gulp": "^4.0.0",
+    "yargs": "^13.1.0"
+  }
+}
