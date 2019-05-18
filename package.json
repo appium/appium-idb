@@ -1,6 +1,6 @@
 {
   "name": "appium-idb",
-  "description": "iOS Debug Bridge interface. NodeJS wrapper on https://www.fbidb.io",
+  "description": "iOS Debug Bridge interface. NodeJS wrapper of https://www.fbidb.io",
   "keywords": [
     "appium"
   ],
