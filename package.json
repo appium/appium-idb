@@ -41,7 +41,8 @@
     "lint": "gulp lint",
     "lint:fix": "gulp eslint --fix",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
-    "precommit-test": "REPORTER=dot gulp once"
+    "precommit-test": "REPORTER=dot gulp once",
+    "build": "gulp transpile"
   },
   "pre-commit": [
     "precommit-msg",
