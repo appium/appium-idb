@@ -1,6 +1,6 @@
 {
   "name": "appium-idb",
-  "description": "Description goes here.",
+  "description": "iOS Debug Bridge interface. NodeJS wrapper of https://www.fbidb.io",
   "keywords": [
     "appium"
   ],
@@ -30,8 +30,12 @@
   ],
   "dependencies": {
     "@babel/runtime": "^7.0.0",
+    "appium-support": "^2.24.0",
     "bluebird": "^3.1.1",
-    "source-map-support": "^0.5.5"
+    "lodash": "^4.0.0",
+    "shell-quote": "^1.6.1",
+    "source-map-support": "^0.5.5",
+    "teen_process": "^1.11.0"
   },
   "scripts": {
     "prepare": "gulp prepublish",
@@ -50,6 +54,7 @@
   ],
   "devDependencies": {
     "appium-gulp-plugins": "^4.0.0",
+    "appium-test-support": "^1.3.1",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
     "eslint-config-appium": "^4.0.1",
