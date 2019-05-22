@@ -3,8 +3,7 @@ import chaiAsPromised from 'chai-as-promised';
 import { fixOutputToArray } from '../../lib/helpers';
 import _ from 'lodash';
 
-// eslint-disable-next-line no-unused-vars
-const should = chai.should();
+chai.should();
 chai.use(chaiAsPromised);
 
 describe('helpers', function () {
