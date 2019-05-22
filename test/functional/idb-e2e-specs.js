@@ -54,7 +54,7 @@ describe('idb', function () {
 
     it('should get information about the device', async function () {
       const info = await idb.describeDevice();
-      info.name.should.eql(MODEL);
+      info.target_description.udid.should.eql(udid);
     });
   });
 });
