@@ -3,7 +3,7 @@ appium-idb
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/appium/appium-idb.svg)](https://greenkeeper.io/)
 
-appium-adb is NodeJS wrapper over iOS Device Bridge (idb) set of utilities made by Facebook. Read https://www.fbidb.io for more details.
+appium-idb is NodeJS wrapper over iOS Device Bridge (idb) set of utilities made by Facebook. Read https://www.fbidb.io for more details.
 
 
 ## Requirements
@@ -18,9 +18,11 @@ appium-adb is NodeJS wrapper over iOS Device Bridge (idb) set of utilities made 
 
 Use the following commands to setup idb and its dependencies:
 
-`brew tap facebook/fb`
-`brew install idb-companion`
-`pip3.6 install fb-idb`
+```
+brew tap facebook/fb
+brew install idb-companion
+pip3.6 install fb-idb
+```
 
 
 ## Usage
