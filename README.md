@@ -36,7 +36,7 @@ await idb.disconnect();
 
 Check https://github.com/appium/appium-idb/blob/master/lib/idb.js on the list of supported IDB options. `udid` option is mandatory and can be both Simulator or real device id. It is mandatory to call `connect` method before invoking idb instance methods (this will trigger idb companion and idb daemon processes if necessary). Calling `disconnect` will stop the previously started companion processes.
 
-Go though the modules in https://github.com/appium/appium-idb/tree/master/lib/tools to get the full list of supported commands.
+Go through the modules in https://github.com/appium/appium-idb/tree/master/lib/tools to get the full list of supported commands.
 
 
 ## Watch
