@@ -113,7 +113,7 @@ describe('idb general', function () {
     });
 
     it('should throw if invalid udid is provided', async function () {
-      const idb = new IDB({udid});
+      const idb = new IDB({udid: 'blabla'});
       await idb.connect().should.eventually.be.rejected;
     });
   });
