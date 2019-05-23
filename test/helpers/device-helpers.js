@@ -16,7 +16,7 @@ async function createDevice (opts = {}) {
 
 async function deleteDevice (udid) {
   if (udid) {
-    await retryInterval(10, 1000, async () => await deleteDevice(udid));
+    await retryInterval(10, 1000, async () => await simctl.deleteDevice(udid));
   }
 }
 
