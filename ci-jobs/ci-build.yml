@@ -15,7 +15,24 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.7'
+    architecture: 'x64'
+  displayName: 'Install Python 3.7'
+
 - script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+    set -e
+    brew tap facebook/fb
+    brew install idb-companion
+    pip3.7 install fb-idb
+  displayName: 'Install idb'
+
+- script: npm install
+  displayName: 'Install Node dependencies'
+
+- script: npm test
+  displayName: 'Run unit tests'
+
+- script: _FORCE_LOGS=1 npm run e2e-test
+  displayName: 'Run functional tests'
