@@ -9,7 +9,7 @@ import UUID from 'uuid-js';
 import IDB from '../..';
 
 
-chai.should();
+const should = chai.should();
 chai.use(chaiAsPromised);
 
 const MODEL = 'iPhone 8';
@@ -20,7 +20,7 @@ async function assertDeviceDescription (idb, udid) {
   info.target_description.udid.should.eql(udid);
 }
 
-describe('idb', function () {
+describe('idb general', function () {
   this.timeout(120000);
   let udid;
 
@@ -102,6 +102,17 @@ describe('idb', function () {
 
     it('should connect and disconnect', async function () {
       await assertDeviceDescription(idb, udid);
+    });
+  });
+
+  describe('connect an invalid device', function () {
+    it('should throw if no udid is provided', function () {
+      should.throw(() => new IDB());
+    });
+
+    it('should throw if invalid udid is provided', async function () {
+      const idb = new IDB({udid});
+      await idb.connect().should.eventually.be.rejected;
     });
   });
 });
