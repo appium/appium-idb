@@ -9,52 +9,112 @@ import UUID from 'uuid-js';
 import IDB from '../..';
 
 
-chai.should();
+const should = chai.should();
 chai.use(chaiAsPromised);
 
 const MODEL = 'iPhone 8';
 const PLATFORM_VERSION = '12.2';
 
-describe('idb', function () {
+async function assertDeviceDescription (idb, udid) {
+  const info = await idb.describeDevice();
+  info.target_description.udid.should.eql(udid);
+}
+
+describe('idb general', function () {
   this.timeout(120000);
   let udid;
 
   before(async function () {
     udid = await createDevice(`appium-idb-tests-${UUID.create().hex.toUpperCase()}`,
       MODEL, PLATFORM_VERSION);
-    await bootDevice(udid);
-    await startBootMonitor(udid);
   });
   after(async function () {
-    if (!udid) {
-      return;
+    if (udid) {
+      await retryInterval(10, 1000, async () => await deleteDevice(udid));
+      udid = null;
     }
-
-    try {
-      await shutdown(udid);
-    } catch (ign) {}
-    await retryInterval(10, 1000, async () => await deleteDevice(udid));
   });
 
-  describe('describeDevice', function () {
+  describe('connect/disconnect (booted device)', function () {
     let idb;
+
     before(async function () {
       idb = new IDB({
         udid,
       });
-      await idb.connect();
+      await bootDevice(udid);
+      await startBootMonitor(udid);
     });
     after(async function () {
-      if (!idb) {
-        return;
-      }
+      try {
+        await shutdown(udid);
+      } catch (ign) {}
+    });
 
+    beforeEach(async function () {
+      await idb.connect();
+    });
+    afterEach(async function () {
       await idb.disconnect();
     });
 
-    it('should get information about the device', async function () {
-      const info = await idb.describeDevice();
-      info.target_description.udid.should.eql(udid);
+    it('should be able to call connect multiple times', async function () {
+      await idb.connect();
+      await assertDeviceDescription(idb, udid);
+    });
+
+    it('should be able to call disconnect multiple times', async function () {
+      await assertDeviceDescription(idb, udid);
+      await idb.disconnect();
+    });
+
+    it('should connect and disconnect', async function () {
+      await assertDeviceDescription(idb, udid);
+    });
+  });
+
+  describe('connect/disconnect (non booted device)', function () {
+    let idb;
+
+    before(async function () {
+      idb = new IDB({
+        udid,
+      });
+      try {
+        await shutdown(udid);
+      } catch (ign) {}
+    });
+
+    beforeEach(async function () {
+      await idb.connect();
+    });
+    afterEach(async function () {
+      await idb.disconnect();
+    });
+
+    it('should be able to call connect multiple times', async function () {
+      await idb.connect();
+      await assertDeviceDescription(idb, udid);
+    });
+
+    it('should be able to call disconnect multiple times', async function () {
+      await assertDeviceDescription(idb, udid);
+      await idb.disconnect();
+    });
+
+    it('should connect and disconnect', async function () {
+      await assertDeviceDescription(idb, udid);
+    });
+  });
+
+  describe('connect an invalid device', function () {
+    it('should throw if no udid is provided', function () {
+      should.throw(() => new IDB());
+    });
+
+    it('should throw if invalid udid is provided', async function () {
+      const idb = new IDB({udid: 'blabla'});
+      await idb.connect().should.eventually.be.rejected;
     });
   });
 });
