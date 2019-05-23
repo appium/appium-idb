@@ -1,19 +1,16 @@
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
 import {
-  createDevice, deleteDevice, shutdown, bootDevice,
-  startBootMonitor,
+  shutdown, bootDevice, startBootMonitor,
 } from 'node-simctl';
-import { retryInterval } from 'asyncbox';
-import UUID from 'uuid-js';
+import {
+  createDevice, deleteDevice
+} from '../helpers/device-helpers';
 import IDB from '../..';
 
 
 const should = chai.should();
 chai.use(chaiAsPromised);
-
-const MODEL = 'iPhone 8';
-const PLATFORM_VERSION = '12.2';
 
 async function assertDeviceDescription (idb, udid) {
   const info = await idb.describeDevice();
@@ -25,14 +22,10 @@ describe('idb general', function () {
   let udid;
 
   before(async function () {
-    udid = await createDevice(`appium-idb-tests-${UUID.create().hex.toUpperCase()}`,
-      MODEL, PLATFORM_VERSION);
+    udid = await createDevice();
   });
   after(async function () {
-    if (udid) {
-      await retryInterval(10, 1000, async () => await deleteDevice(udid));
-      udid = null;
-    }
+    await deleteDevice(udid);
   });
 
   describe('connect/disconnect (booted device)', function () {
