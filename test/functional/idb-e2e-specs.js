@@ -36,11 +36,12 @@ describe('idb general', function () {
   });
 
   describe('connect/disconnect (booted device)', function () {
-    const idb = new IDB({
-      udid,
-    });
+    let idb;
 
     before(async function () {
+      idb = new IDB({
+        udid,
+      });
       await bootDevice(udid);
       await startBootMonitor(udid);
     });
@@ -73,11 +74,12 @@ describe('idb general', function () {
   });
 
   describe('connect/disconnect (non booted device)', function () {
-    const idb = new IDB({
-      udid,
-    });
+    let idb;
 
     before(async function () {
+      idb = new IDB({
+        udid,
+      });
       try {
         await shutdown(udid);
       } catch (ign) {}
