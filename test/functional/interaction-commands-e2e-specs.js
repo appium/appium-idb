@@ -47,9 +47,9 @@ describe('idb interaction commands', function () {
   });
 
   it('pressKeycode', async function () {
-    await idb.pressKeycode(4).should.be.fulfilled;
-    await idb.pressKeycode([4, 5, 6], {
+    await idb.pressKeycode(4, {
       duration: 2,
     }).should.be.fulfilled;
+    await idb.pressKeycode([4, 5, 6]).should.be.fulfilled;
   });
 });
