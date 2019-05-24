@@ -8,6 +8,7 @@ import {
   createDevice, deleteDevice
 } from '../helpers/device-helpers';
 import IDB from '../..';
+import { waitForCondition } from 'asyncbox';
 
 
 const MAPS_BUNDLE_ID = 'com.apple.Maps';
@@ -66,6 +67,9 @@ describe('idb app commands', function () {
     });
     appProc.isRunning.should.be.true;
     await idb.terminateApp(MAPS_BUNDLE_ID);
-    appProc.isRunning.should.be.false;
+    await waitForCondition(() => !appProc.isRunning, {
+      waitMs: 5000,
+      intervalMs: 500,
+    });
   });
 });
