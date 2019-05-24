@@ -24,18 +24,14 @@ describe('idb misc commands', function () {
     });
     await bootDevice(udid);
     await startBootMonitor(udid);
+    await idb.connect();
   });
   after(async function () {
+    await idb.disconnect();
     try {
       await shutdown(udid);
     } catch (ign) {}
     await deleteDevice(udid);
-  });
-  beforeEach(async function () {
-    await idb.connect();
-  });
-  afterEach(async function () {
-    await idb.disconnect();
   });
 
   it('describeDevice', async function () {
