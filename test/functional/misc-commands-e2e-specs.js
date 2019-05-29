@@ -39,12 +39,8 @@ describe('idb misc commands', function () {
     info.target_description.udid.should.eql(udid);
   });
 
-  it('focusSimulator', async function () {
-    await idb.focusSimulator().should.be.fulfilled;
-  });
-
   it('openUrl', async function () {
-    await idb.openUrl().should.be.fulfilled;
+    await idb.openUrl('https://appium.io').should.be.fulfilled;
   });
 
   it('clearKeychain', async function () {
