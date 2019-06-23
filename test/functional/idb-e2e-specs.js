@@ -45,7 +45,7 @@ describe('idb general', function () {
     });
 
     beforeEach(async function () {
-      await idb.connect();
+      await idb.connect({onlineTimeout: 10000});
     });
     afterEach(async function () {
       await idb.disconnect();
@@ -86,17 +86,11 @@ describe('idb general', function () {
     });
 
     it('should be able to call connect multiple times', async function () {
-      await idb.connect();
-      await assertDeviceDescription(idb, udid);
+      await idb.connect().should.be.eventually.fulfilled;
     });
 
     it('should be able to call disconnect multiple times', async function () {
-      await assertDeviceDescription(idb, udid);
-      await idb.disconnect();
-    });
-
-    it('should connect and disconnect', async function () {
-      await assertDeviceDescription(idb, udid);
+      await idb.disconnect().should.be.eventually.fulfilled;
     });
   });
 

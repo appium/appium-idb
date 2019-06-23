@@ -25,7 +25,7 @@ describe('idb accessibility commands', function () {
     });
     await bootDevice(udid);
     await startBootMonitor(udid);
-    await idb.connect();
+    await idb.connect({onlineTimeout: 10000});
   });
   after(async function () {
     await idb.disconnect();
