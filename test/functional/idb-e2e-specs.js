@@ -37,32 +37,19 @@ describe('idb general', function () {
       });
       await bootDevice(udid);
       await startBootMonitor(udid);
+      await idb.connect({onlineTimeout: 10000});
     });
     after(async function () {
+      await idb.disconnect();
       try {
         await shutdown(udid);
       } catch (ign) {}
     });
 
-    beforeEach(async function () {
-      await idb.connect();
-    });
-    afterEach(async function () {
-      await idb.disconnect();
-    });
-
-    it('should be able to call connect multiple times', async function () {
+    it('should be able to call connect/disconnect multiple times', async function () {
       await idb.connect();
       await assertDeviceDescription(idb, udid);
-    });
-
-    it('should be able to call disconnect multiple times', async function () {
-      await assertDeviceDescription(idb, udid);
       await idb.disconnect();
-    });
-
-    it('should connect and disconnect', async function () {
-      await assertDeviceDescription(idb, udid);
     });
   });
 
@@ -86,17 +73,11 @@ describe('idb general', function () {
     });
 
     it('should be able to call connect multiple times', async function () {
-      await idb.connect();
-      await assertDeviceDescription(idb, udid);
+      await idb.connect().should.be.eventually.fulfilled;
     });
 
     it('should be able to call disconnect multiple times', async function () {
-      await assertDeviceDescription(idb, udid);
-      await idb.disconnect();
-    });
-
-    it('should connect and disconnect', async function () {
-      await assertDeviceDescription(idb, udid);
+      await idb.disconnect().should.be.eventually.fulfilled;
     });
   });
 
