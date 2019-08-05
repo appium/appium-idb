@@ -9,6 +9,7 @@ import {
   createDevice, deleteDevice
 } from '../helpers/device-helpers';
 import IDB from '../..';
+import { retryInterval } from 'asyncbox';
 
 
 chai.should();
@@ -47,21 +48,11 @@ describe('idb xctest commands', function () {
     const installedXctestBundleIds = await idb.listXCTestBundles();
     installedXctestBundleIds.should.includes(xctestBundleId);
     const process = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId);
-    const statusCheck = async () => {
-      for (let i = 0; i < 100; i++) {
-        try {
-          await request({
-            url: 'http://localhost:8100/status',
-            method: 'GET',
-          });
-          return;
-        } catch (ign) {
-        }
-        throw new Error(`Couldn't reach WDA within the retries`);
-      }
-    };
     try {
-      statusCheck();
+      await retryInterval(10, 1000, async () => await request({
+        url: 'http://localhost:8100/status',
+        method: 'GET',
+      }));
     } finally {
       process.stop();
     }
