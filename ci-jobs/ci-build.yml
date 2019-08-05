@@ -24,7 +24,7 @@ steps:
 - script: |
     set -e
     brew tap facebook/fb
-    brew install --HEAD idb-companion
+    brew install idb-companion
     pip3.7 install fb-idb
   displayName: 'Install idb'
 
