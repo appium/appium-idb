@@ -10,6 +10,7 @@ import {
 } from '../helpers/device-helpers';
 import IDB from '../..';
 import { retryInterval } from 'asyncbox';
+import { fs } from 'appium-support';
 
 
 chai.should();
@@ -43,6 +44,9 @@ describe('idb xctest commands', function () {
   });
 
   it('xcuitest', async function () {
+    if (!fs.exists(WDA_BUNDLE_PATH)) {
+      throw new Error('WDA doesnt exist');
+    }
     await idb.installApp(WDA_BUNDLE_PATH);
     const xctestBundleId = await idb.installXCTestBundle(XCTEST_BUNDLE_PATH);
     const installedXctestBundleIds = await idb.listXCTestBundles();
