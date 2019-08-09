@@ -57,4 +57,20 @@ describe('idb xctest commands', function () {
       process.stop();
     }
   });
+  it('xcuitest with env', async function () {
+    const port = 8101;
+    await idb.installApp(WDA_BUNDLE_PATH);
+    const xctestBundleId = await idb.installXCTestBundle(XCTEST_BUNDLE_PATH);
+    const installedXctestBundleIds = await idb.listXCTestBundles();
+    installedXctestBundleIds.should.includes(xctestBundleId);
+    const process = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId, { env: { USE_PORT: port }});
+    try {
+      await retryInterval(10, 1000, async () => await request({
+        url: `http://localhost:${port}/status`,
+        method: 'GET',
+      }));
+    } finally {
+      process.stop();
+    }
+  });
 });
