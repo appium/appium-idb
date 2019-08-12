@@ -1,7 +1,7 @@
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
 import {
-  fixOutputToArray, fixOutputToObject
+  fixOutputToArray, fixOutputToObject, convertToIDBEnv
 } from '../../lib/helpers';
 import _ from 'lodash';
 
@@ -84,6 +84,16 @@ describe('helpers', function () {
       const result = fixOutputToObject('');
       _.isPlainObject(result).should.be.true;
       _.isEmpty(result).should.be.true;
+    });
+  });
+  describe('convertToIDBEnv', function () {
+    it('should convert to idb env', function () {
+      const convertedEnvs = convertToIDBEnv({FAKE: 'ENV'});
+      convertedEnvs.should.have.property('IDB_FAKE');
+    });
+    it('should return null with wrong arg', function () {
+      const convertedEnvs = convertToIDBEnv(1);
+      chai.should().equal(convertedEnvs, null);
     });
   });
 });
