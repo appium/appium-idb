@@ -19,6 +19,7 @@ const WDA_BUNDLE_ID = 'com.apple.test.WebDriverAgentRunner-Runner';
 const WDA_BUNDLE_PATH = path.join(__dirname, '..', '..', '..', 'test', 'asset', 'WebDriverAgentRunner-Runner.app');
 const XCTEST_BUNDLE_PATH = path.join(WDA_BUNDLE_PATH, 'PlugIns', 'WebDriverAgentRunner.xctest');
 const SAFARI_BUNDLE_ID = 'com.apple.mobilesafari';
+// const LOG_PATH = path.join(__dirname, 'log');
 
 describe('idb xctest commands', function () {
   this.timeout(120000);
