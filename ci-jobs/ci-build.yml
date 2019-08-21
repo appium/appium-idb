@@ -36,3 +36,6 @@ steps:
 
 - script: _FORCE_LOGS=1 npm run e2e-test
   displayName: 'Run functional tests'
+
+- script: cat /tmp/companion_log
+  displayName: 'Show logs'
