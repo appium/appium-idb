@@ -17,15 +17,15 @@ steps:
 
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '3.7'
+    versionSpec: '3.6'
     architecture: 'x64'
-  displayName: 'Install Python 3.7'
+  displayName: 'Install Python 3.6'
 
 - script: |
     set -e
     brew tap facebook/fb
     brew install idb-companion
-    pip3.7 install fb-idb
+    pip3.6 install fb-idb
   displayName: 'Install idb'
 
 - script: xcrun simctl list runtimes
