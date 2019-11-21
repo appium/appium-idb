@@ -74,7 +74,7 @@ describe('idb general', function () {
       await idb.disconnect();
     });
 
-    it.only('should be able to call connect multiple times', async function () { // eslint-disable-line
+    it('should be able to call connect multiple times', async function () {
       await idb.connect().should.be.eventually.fulfilled;
     });
 
