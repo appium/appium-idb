@@ -37,5 +37,5 @@ steps:
 - script: npm test
   displayName: 'Run unit tests'
 
-- script: _FORCE_LOGS=1 npm run e2e-test
+- script: _FORCE_LOGS=1 PLATFORM_VERSION="13.2" npm run e2e-test
   displayName: 'Run functional tests'
