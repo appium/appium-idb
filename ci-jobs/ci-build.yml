@@ -8,7 +8,9 @@ trigger:
 
 pool:
   vmImage: 'macOS-10.14'
-
+variables:
+  PLATFORM_VERSION: "13.2"
+  _FORCE_LOGS: 1
 steps:
 - task: NodeTool@0
   inputs:
@@ -37,5 +39,5 @@ steps:
 - script: npm test
   displayName: 'Run unit tests'
 
-- script: _FORCE_LOGS=1 PLATFORM_VERSION="13.2" npm run e2e-test
+- script: npm run e2e-test
   displayName: 'Run functional tests'
