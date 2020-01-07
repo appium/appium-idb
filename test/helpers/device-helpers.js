@@ -2,8 +2,9 @@ import UUID from 'uuid-js';
 import * as simctl from 'node-simctl';
 import { retryInterval } from 'asyncbox';
 
-const MODEL = 'iPhone 8';
-const PLATFORM_VERSION = '12.2';
+
+const MODEL = process.env.DEVICE_NAME || 'iPhone 8';
+const PLATFORM_VERSION = process.env.PLATFORM_VERSION || '13.2';
 
 async function createDevice (opts = {}) {
   const {

@@ -4,6 +4,7 @@ import chaiAsPromised from 'chai-as-promised';
 import {
   shutdown, bootDevice, startBootMonitor,
 } from 'node-simctl';
+import { retryInterval } from 'asyncbox';
 import {
   createDevice, deleteDevice
 } from '../helpers/device-helpers';
@@ -36,7 +37,9 @@ describe('idb accessibility commands', function () {
   });
 
   it('describeAll', async function () {
-    const ui = await idb.describeAll();
+    const ui = await retryInterval(5, 100, async function () {
+      return await idb.describeAll();
+    });
     _.isArray(ui).should.be.true;
     _.isEmpty(ui).should.be.false;
   });

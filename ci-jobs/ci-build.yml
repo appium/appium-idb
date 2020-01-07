@@ -8,7 +8,9 @@ trigger:
 
 pool:
   vmImage: 'macOS-10.14'
-
+variables:
+  PLATFORM_VERSION: "13.2"
+  _FORCE_LOGS: 1
 steps:
 - task: NodeTool@0
   inputs:
@@ -24,9 +26,12 @@ steps:
 - script: |
     set -e
     brew tap facebook/fb
-    brew install idb-companion
+    brew install idb-companion --HEAD
     pip3.7 install fb-idb
   displayName: 'Install idb'
+
+- script: xcrun simctl list runtimes
+  displayName: 'List runtimes'
 
 - script: npm install
   displayName: 'Install Node dependencies'
@@ -34,5 +39,5 @@ steps:
 - script: npm test
   displayName: 'Run unit tests'
 
-- script: _FORCE_LOGS=1 npm run e2e-test
+- script: npm run e2e-test
   displayName: 'Run functional tests'
