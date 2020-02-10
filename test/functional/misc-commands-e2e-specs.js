@@ -1,10 +1,7 @@
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
 import {
-  shutdown, bootDevice, startBootMonitor,
-} from 'node-simctl';
-import {
-  createDevice, deleteDevice
+  prepareDevice, deleteDevice
 } from '../helpers/device-helpers';
 import IDB from '../..';
 
@@ -14,31 +11,26 @@ chai.use(chaiAsPromised);
 
 describe('idb misc commands', function () {
   this.timeout(120000);
-  let udid;
+  let simctl;
   let idb;
 
   before(async function () {
-    udid = await createDevice();
+    simctl = await prepareDevice();
     idb = new IDB({
-      udid,
+      udid: simctl.udid,
     });
-    await bootDevice(udid);
-    await startBootMonitor(udid);
     await idb.connect({onlineTimeout: 10000});
   });
   after(async function () {
     await idb.disconnect();
-    try {
-      await shutdown(udid);
-    } catch (ign) {}
-    await deleteDevice(udid);
+    await deleteDevice(simctl);
   });
 
   // TODO: getting the description returns data in a format that is a pain
   // to parse.
   it.skip('describeDevice', async function () {
     const info = await idb.describeDevice();
-    info.target_description.udid.should.eql(udid);
+    info.target_description.udid.should.eql(simctl.udid);
   });
 
   it('openUrl', async function () {

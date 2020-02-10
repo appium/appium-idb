@@ -1,10 +1,7 @@
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
 import {
-  shutdown, bootDevice, startBootMonitor,
-} from 'node-simctl';
-import {
-  createDevice, deleteDevice
+  prepareDevice, deleteDevice
 } from '../helpers/device-helpers';
 import IDB from '../..';
 
@@ -19,13 +16,15 @@ async function assertDeviceDescription (idb, udid) {
 
 describe('idb general', function () {
   this.timeout(120000);
-  let udid;
+  let simctl;
 
   before(async function () {
-    udid = await createDevice();
+    simctl = await prepareDevice({
+      prebooted: false,
+    });
   });
   after(async function () {
-    await deleteDevice(udid);
+    await deleteDevice(simctl);
   });
 
   describe('connect/disconnect (booted device)', function () {
@@ -33,16 +32,16 @@ describe('idb general', function () {
 
     before(async function () {
       idb = new IDB({
-        udid,
+        udid: simctl.udid,
       });
-      await bootDevice(udid);
-      await startBootMonitor(udid);
+      await simctl.bootDevice();
+      await simctl.startBootMonitor();
       await idb.connect({onlineTimeout: 10000});
     });
     after(async function () {
       await idb.disconnect();
       try {
-        await shutdown(udid);
+        await simctl.shutdownDevice();
       } catch (ign) {}
     });
 
@@ -50,7 +49,7 @@ describe('idb general', function () {
     // to parse.
     it.skip('should be able to call connect/disconnect multiple times', async function () {
       await idb.connect();
-      await assertDeviceDescription(idb, udid);
+      await assertDeviceDescription(idb, simctl.udid);
       await idb.disconnect();
     });
   });
@@ -60,10 +59,10 @@ describe('idb general', function () {
 
     before(async function () {
       idb = new IDB({
-        udid,
+        udid: simctl.udid,
       });
       try {
-        await shutdown(udid);
+        await simctl.shutdownDevice();
       } catch (ign) {}
     });
 
