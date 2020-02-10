@@ -25,9 +25,6 @@ describe('idb accessibility commands', function () {
   });
   after(async function () {
     await idb.disconnect();
-    try {
-      await simctl.shutdownDevice();
-    } catch (ign) {}
     await deleteDevice(simctl);
   });
 
