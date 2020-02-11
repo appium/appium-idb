@@ -1,12 +1,9 @@
 import _ from 'lodash';
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
-import {
-  shutdown, bootDevice, startBootMonitor,
-} from 'node-simctl';
 import { retryInterval } from 'asyncbox';
 import {
-  createDevice, deleteDevice
+  prepareDevice, deleteDevice
 } from '../helpers/device-helpers';
 import IDB from '../..';
 
@@ -16,24 +13,19 @@ chai.use(chaiAsPromised);
 
 describe('idb accessibility commands', function () {
   this.timeout(120000);
-  let udid;
   let idb;
+  let simctl;
 
   before(async function () {
-    udid = await createDevice();
+    simctl = await prepareDevice();
     idb = new IDB({
-      udid,
+      udid: simctl.udid,
     });
-    await bootDevice(udid);
-    await startBootMonitor(udid);
     await idb.connect({onlineTimeout: 10000});
   });
   after(async function () {
     await idb.disconnect();
-    try {
-      await shutdown(udid);
-    } catch (ign) {}
-    await deleteDevice(udid);
+    await deleteDevice(simctl);
   });
 
   it('describeAll', async function () {

@@ -30,8 +30,10 @@ steps:
     pip3.7 install fb-idb
   displayName: 'Install idb'
 
-- script: xcrun simctl list runtimes
-  displayName: 'List runtimes'
+- script: |
+    /bin/bash -c "sudo xcode-select -s /Applications/Xcode_11.2.app/Contents/Developer"
+    xcrun simctl list runtimes
+  displayName: 'Setup Xcode'
 
 - script: npm install
   displayName: 'Install Node dependencies'

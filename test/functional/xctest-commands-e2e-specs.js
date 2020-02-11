@@ -3,10 +3,7 @@ import path from 'path';
 import chaiAsPromised from 'chai-as-promised';
 import request from 'request-promise';
 import {
-  shutdown, bootDevice, startBootMonitor, installApp
-} from 'node-simctl';
-import {
-  createDevice, deleteDevice
+  prepareDevice, deleteDevice
 } from '../helpers/device-helpers';
 import IDB from '../..';
 import { retryInterval } from 'asyncbox';
@@ -22,28 +19,23 @@ const SAFARI_BUNDLE_ID = 'com.apple.mobilesafari';
 
 describe('idb xctest commands', function () {
   this.timeout(120000);
-  let udid;
+  let simctl;
   let idb;
 
   before(async function () {
-    udid = await createDevice();
+    simctl = await prepareDevice();
     idb = new IDB({
-      udid,
+      udid: simctl.udid,
     });
-    await bootDevice(udid);
-    await startBootMonitor(udid);
     await idb.connect({onlineTimeout: 10000});
   });
   after(async function () {
     await idb.disconnect();
-    try {
-      await shutdown(udid);
-    } catch (ign) {}
-    await deleteDevice(udid);
+    await deleteDevice(simctl);
   });
 
   it('xcuitest', async function () {
-    await installApp(udid, WDA_BUNDLE_PATH);
+    await simctl.installApp(WDA_BUNDLE_PATH);
     const xctestBundleId = await idb.installXCTestBundle(XCTEST_BUNDLE_PATH);
     const installedXctestBundleIds = await idb.listXCTestBundles();
     installedXctestBundleIds.should.includes(xctestBundleId);
@@ -59,7 +51,7 @@ describe('idb xctest commands', function () {
   });
   it('xcuitest with env', async function () {
     const port = 8101;
-    await installApp(udid, WDA_BUNDLE_PATH);
+    await simctl.installApp(WDA_BUNDLE_PATH);
     const xctestBundleId = await idb.installXCTestBundle(XCTEST_BUNDLE_PATH);
     const installedXctestBundleIds = await idb.listXCTestBundles();
     installedXctestBundleIds.should.includes(xctestBundleId);
