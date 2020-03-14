@@ -1,4 +1,4 @@
-import UUID from 'uuid-js';
+import { util } from 'appium-support';
 import { retryInterval } from 'asyncbox';
 import Simctl from 'node-simctl';
 
@@ -13,7 +13,7 @@ async function prepareDevice (opts = {}) {
   } = opts;
   const simctl = new Simctl();
   simctl.udid = await simctl.createDevice(
-    `appium-idb-tests-${UUID.create().hex.toUpperCase()}`,
+    `appium-idb-tests-${util.uuidV4().toUpperCase()}`,
     model, platformVersion);
   if (prebooted) {
     await simctl.bootDevice();
