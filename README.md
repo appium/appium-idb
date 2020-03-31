@@ -1,8 +1,6 @@
 appium-idb
 ===================
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/appium/appium-idb.svg)](https://greenkeeper.io/)
-
 appium-idb is NodeJS wrapper over iOS Device Bridge (idb) set of utilities made by Facebook. Read https://www.fbidb.io for more details.
 
 
