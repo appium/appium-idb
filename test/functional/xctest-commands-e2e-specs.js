@@ -1,7 +1,7 @@
 import chai from 'chai';
 import path from 'path';
 import chaiAsPromised from 'chai-as-promised';
-import request from 'request-promise';
+import axios from 'axios';
 import {
   prepareDevice, deleteDevice
 } from '../helpers/device-helpers';
@@ -41,9 +41,9 @@ describe('idb xctest commands', function () {
     installedXctestBundleIds.should.includes(xctestBundleId);
     const process = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId);
     try {
-      await retryInterval(10, 1000, async () => await request({
+      await retryInterval(10, 1000, async () => await axios({
         url: 'http://localhost:8100/status',
-        method: 'GET',
+        timeout: 300,
       }));
     } finally {
       process.stop();
@@ -57,9 +57,9 @@ describe('idb xctest commands', function () {
     installedXctestBundleIds.should.includes(xctestBundleId);
     const process = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId, { env: { USE_PORT: port }});
     try {
-      await retryInterval(10, 1000, async () => await request({
+      await retryInterval(10, 1000, async () => await axios({
         url: `http://localhost:${port}/status`,
-        method: 'GET',
+        timeout: 300,
       }));
     } finally {
       process.stop();
