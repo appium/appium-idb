@@ -37,7 +37,8 @@ describe('idb xctest commands', function () {
   it('xcuitest', async function () {
     await simctl.installApp(WDA_BUNDLE_PATH);
     const xctestBundleId = await idb.installXCTestBundle(XCTEST_BUNDLE_PATH);
-    const installedXctestBundleIds = await idb.listXCTestBundles();
+    xctestBundleId.should.eql('com.facebook.wda.runner');
+    const installedXctestBundleIds = await idb.listXCTestBundles(xctestBundleId);
     installedXctestBundleIds.should.includes(xctestBundleId);
     const process = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId);
     try {
@@ -55,7 +56,10 @@ describe('idb xctest commands', function () {
     const xctestBundleId = await idb.installXCTestBundle(XCTEST_BUNDLE_PATH);
     const installedXctestBundleIds = await idb.listXCTestBundles();
     installedXctestBundleIds.should.includes(xctestBundleId);
-    const process = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId, { env: { USE_PORT: port }});
+    const testsInBundle = await idb.listXCTestsInTestBundle(xctestBundleId);
+    testsInBundle.should.eql(['UITestingUITests/testRunner']);
+    const process = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId,
+        { env: { USE_PORT: port }, testType: 'ui'});
     try {
       await retryInterval(10, 1000, async () => await axios({
         url: `http://localhost:${port}/status`,
