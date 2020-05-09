@@ -58,7 +58,7 @@ describe('idb xctest commands', function () {
     installedXctestBundleIds.should.includes(xctestBundleId);
     const testsInBundle = await idb.listXCTestsInTestBundle(xctestBundleId);
     testsInBundle.should.eql(['UITestingUITests/testRunner']);
-    const process = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId, 'ui', { env: { USE_PORT: port }});
+    const process = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId, { env: { USE_PORT: port }, testType: 'ui'});
     try {
       await retryInterval(10, 1000, async () => await request({
         url: `http://localhost:${port}/status`,
