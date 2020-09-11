@@ -23,15 +23,14 @@ steps:
     architecture: 'x64'
   displayName: 'Install Python 3.7'
 
-- script: |
-    set -e
+- bash: |
     brew tap facebook/fb
-    brew install idb-companion --HEAD
-    pip3.7 install fb-idb
-  displayName: 'Install idb'
+    brew install idb-companion
+    python -m pip install --user fb-idb
+  displayName: Install IDB
 
 - script: |
-    /bin/bash -c "sudo xcode-select -s /Applications/Xcode_11.2.app/Contents/Developer"
+    /bin/bash -c "sudo xcode-select -s /Applications/Xcode_12.0.app/Contents/Developer"
     xcrun simctl list runtimes
   displayName: 'Setup Xcode'
 
