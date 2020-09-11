@@ -26,18 +26,11 @@ steps:
 - script: |
     brew tap facebook/fb
     brew install idb-companion
-    idb_companion --help
   displayName: Install IDB Companion
 
 - script: |
     python -m pip install --user fb-idb
-    idb --help
   displayName: Install IDB
-
-- script: |
-    idb_companion --help
-    idb --help
-  displayName: Verify idb_companion and idb
 
 - script: |
     /bin/bash -c "sudo xcode-select -s /Applications/Xcode_11.7.app/Contents/Developer"
