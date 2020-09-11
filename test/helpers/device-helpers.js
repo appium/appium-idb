@@ -3,7 +3,7 @@ import { retryInterval } from 'asyncbox';
 import Simctl from 'node-simctl';
 
 const MODEL = process.env.DEVICE_NAME || 'iPhone 8';
-const PLATFORM_VERSION = process.env.PLATFORM_VERSION || '13.2';
+const PLATFORM_VERSION = process.env.PLATFORM_VERSION || '13.7';
 
 async function prepareDevice (opts = {}) {
   const {

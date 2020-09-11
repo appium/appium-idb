@@ -9,7 +9,7 @@ trigger:
 pool:
   vmImage: 'macOS-10.15'
 variables:
-  PLATFORM_VERSION: "13.4"
+  PLATFORM_VERSION: "13.7"
   _FORCE_LOGS: 1
 steps:
 - task: NodeTool@0
@@ -26,8 +26,16 @@ steps:
 - bash: |
     brew tap facebook/fb
     brew install idb-companion
+  displayName: Install IDB Companion
+
+- bash: |
     python -m pip install --user fb-idb
   displayName: Install IDB
+
+- script: |
+    idb_companion --help
+    idb --help
+  displayName: Verify idb_companion and idb
 
 - script: |
     /bin/bash -c "sudo xcode-select -s /Applications/Xcode_11.7.app/Contents/Developer"
