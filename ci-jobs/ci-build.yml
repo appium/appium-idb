@@ -40,5 +40,5 @@ steps:
 - script: npm test
   displayName: 'Run unit tests'
 
-- script: npm run e2e-test
+- script: export PATH="${PATH}:$(python -c 'import site; print(site.USER_BASE)')/bin" && npm run e2e-test
   displayName: 'Run functional tests'
