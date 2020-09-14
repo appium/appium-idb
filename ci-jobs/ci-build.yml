@@ -23,13 +23,10 @@ steps:
     architecture: 'x64'
   displayName: 'Install Python 3.7'
 
-- script: |
+- bash: |
     brew tap facebook/fb
     brew install idb-companion
-  displayName: Install IDB Companion
-
-- script: |
-    python -m pip install --user fb-idb
+    /usr/local/bin/pip3 install --user fb-idb
   displayName: Install IDB
 
 - script: |
