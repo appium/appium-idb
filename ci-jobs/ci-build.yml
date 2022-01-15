@@ -7,14 +7,14 @@ trigger:
 - master
 
 pool:
-  vmImage: 'macOS-10.14'
+  vmImage: 'macOS-10.15'
 variables:
-  PLATFORM_VERSION: "13.2"
+  PLATFORM_VERSION: "14.2"
   _FORCE_LOGS: 1
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
+    versionSpec: '14.x'
   displayName: 'Install Node.js'
 
 - task: UsePythonVersion@0
