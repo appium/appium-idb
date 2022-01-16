@@ -7,9 +7,9 @@ trigger:
 - master
 
 pool:
-  vmImage: 'macOS-10.15'
+  vmImage: 'macOS-11'
 variables:
-  PLATFORM_VERSION: "14.2"
+  PLATFORM_VERSION: "15.2"
   _FORCE_LOGS: 1
 steps:
 - task: NodeTool@0
@@ -26,12 +26,12 @@ steps:
 - script: |
     set -e
     brew tap facebook/fb
-    brew install idb-companion@1.1.5
+    brew install idb-companion
     pip3.7 install fb-idb
   displayName: 'Install idb'
 
 - script: |
-    /bin/bash -c "sudo xcode-select -s /Applications/Xcode_11.2.app/Contents/Developer"
+    /bin/bash -c "sudo xcode-select -s /Applications/Xcode_13.2.app/Contents/Developer"
     xcrun simctl list runtimes
   displayName: 'Setup Xcode'
 
