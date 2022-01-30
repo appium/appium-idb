@@ -20,3 +20,33 @@ jobs:
     - run: npm install
     - run: npm run lint
     - run: npm run test
+
+  e2e:
+    runs-on: macos-11
+    env:
+      PLATFORM_VERSION: '13.2'
+      DEVICE_NAME: iPhone 11 Pro Max
+      NODE_VERSION: 14.x
+      PYTHON_VERSION: '3.7'
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: ${{ env.PLATFORM_VERSION }}
+    - run: xcrun simctl list
+    - uses: actions/setup-python@v2
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    - run: |
+        brew tap facebook/fb
+        brew install idb-companion
+        /usr/local/bin/pip3 install --user fb-idb
+    - name: Use Node.js ${{ env.NODE_VERSION }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+    - run: npm install
+    - run: |
+        export PATH="${PATH}:$(python3 -c 'import site; print(site.USER_BASE)')/bin"
+        npm run e2e-test
