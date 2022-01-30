@@ -39,11 +39,28 @@ jobs:
       with:
         python-version: ${{ env.PYTHON_VERSION }}
     - run: |
+        brew install protobuf
+        brew install grpc
+
+        mkdir /tmp/protoc
+        cd /tmp/protoc
+        curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v3.17.3/protoc-3.17.3-osx-x86_64.zip
+        unzip protoc-3.17.3-osx-x86_64.zip
+        chmod +x /tmp/protoc/bin/protoc
+        sudo ln -sf /tmp/protoc/bin/protoc /usr/local/bin/protoc
+
         brew tap facebook/fb
         brew install idb-companion
+
+        cd ~
+        sudo rm /usr/local/bin/protoc
+        rm -Rf /tmp/protoc
+
+        brew uninstall grpc
+        brew uninstall protobuf
+
         /usr/local/bin/pip3 install --user fb-idb
-    - name: Use Node.js ${{ env.NODE_VERSION }}
-      uses: actions/setup-node@v1
+    - uses: actions/setup-node@v1
       with:
         node-version: ${{ env.NODE_VERSION }}
     - run: npm install
