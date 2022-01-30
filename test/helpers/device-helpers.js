@@ -1,4 +1,4 @@
-import { util } from 'appium-support';
+import { util } from '@appium/support';
 import { retryInterval } from 'asyncbox';
 import Simctl from 'node-simctl';
 
