@@ -1,7 +1,7 @@
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
 import {
-  prepareDevice, deleteDevice
+  prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS
 } from '../helpers/device-helpers';
 import IDB from '../..';
 
@@ -36,7 +36,7 @@ describe('idb general', function () {
       });
       await simctl.bootDevice();
       await simctl.startBootMonitor();
-      await idb.connect({onlineTimeout: 10000});
+      await idb.connect({onlineTimeout: ONLINE_TIMEOUT_MS});
     });
     after(async function () {
       await idb.disconnect();

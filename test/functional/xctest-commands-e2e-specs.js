@@ -3,7 +3,7 @@ import path from 'path';
 import chaiAsPromised from 'chai-as-promised';
 import axios from 'axios';
 import {
-  prepareDevice, deleteDevice
+  prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS
 } from '../helpers/device-helpers';
 import IDB from '../..';
 import { retryInterval } from 'asyncbox';
@@ -27,7 +27,7 @@ describe('idb xctest commands', function () {
     idb = new IDB({
       udid: simctl.udid,
     });
-    await idb.connect({onlineTimeout: 10000});
+    await idb.connect({onlineTimeout: ONLINE_TIMEOUT_MS});
   });
   after(async function () {
     await idb.disconnect();

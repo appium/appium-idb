@@ -4,6 +4,7 @@ import Simctl from 'node-simctl';
 
 const MODEL = process.env.DEVICE_NAME || 'iPhone 8';
 const PLATFORM_VERSION = process.env.PLATFORM_VERSION || '13.2';
+const ONLINE_TIMEOUT_MS = 60000;
 
 async function prepareDevice (opts = {}) {
   const {
@@ -31,4 +32,4 @@ async function deleteDevice (simctl) {
   }
 }
 
-export { prepareDevice, deleteDevice };
+export { prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS };
