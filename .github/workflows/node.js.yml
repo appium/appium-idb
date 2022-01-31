@@ -24,7 +24,7 @@ jobs:
   e2e:
     runs-on: macos-11
     env:
-      PLATFORM_VERSION: '13.2'
+      PLATFORM_VERSION: '15.2'
       DEVICE_NAME: iPhone 11 Pro Max
       NODE_VERSION: 14.x
       PYTHON_VERSION: '3.7'
@@ -59,11 +59,11 @@ jobs:
         brew uninstall grpc
         brew uninstall protobuf
 
-        /usr/local/bin/pip3 install --user fb-idb
+        /usr/local/opt/python@3.7/bin/python3.7 -m pip install --user fb-idb
     - uses: actions/setup-node@v1
       with:
         node-version: ${{ env.NODE_VERSION }}
     - run: npm install
     - run: |
-        export PATH="${PATH}:$(python3 -c 'import site; print(site.USER_BASE)')/bin"
+        export PATH="${PATH}:$(/usr/local/opt/python@3.7/bin/python3.7 -c 'import site; print(site.USER_BASE)')/bin"
         npm run e2e-test
