@@ -36,9 +36,7 @@ jobs:
       with:
         xcode-version: ${{ env.XCODE_VERSION }}
     - run: xcrun simctl list
-    - uses: actions/setup-python@v2
-      with:
-        python-version: ${{ env.PYTHON_VERSION }}
+    - run: brew install python@3.7
     - run: |
         brew install protobuf
         brew install grpc
