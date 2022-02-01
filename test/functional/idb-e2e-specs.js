@@ -61,24 +61,26 @@ describe('idb general', function () {
       idb = new IDB({
         udid: simctl.udid,
       });
-      try {
-        await simctl.shutdownDevice();
-      } catch (ign) {}
+      await simctl.shutdownDevice({timeout: ONLINE_TIMEOUT_MS});
     });
 
     beforeEach(async function () {
-      await idb.connect();
+      try {
+        await idb.connect();
+      } catch (e) {}
     });
     afterEach(async function () {
-      await idb.disconnect();
+      try {
+        await idb.disconnect();
+      } catch (e) {}
     });
 
-    it('should be able to call connect multiple times', async function () {
-      await idb.connect().should.be.eventually.fulfilled;
+    it('should not be able to call connect multiple times', async function () {
+      await idb.connect().should.be.rejected;
     });
 
     it('should be able to call disconnect multiple times', async function () {
-      await idb.disconnect().should.be.eventually.fulfilled;
+      await idb.disconnect().should.be.fulfilled;
     });
   });
 
