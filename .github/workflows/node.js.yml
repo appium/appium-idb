@@ -65,4 +65,4 @@ jobs:
     - run: npm install
     - run: |
         export PATH="${PATH}:$(/usr/local/opt/python@3.7/bin/python3.7 -c 'import site; print(site.USER_BASE)')/bin"
-        npm run e2e-test
+        _FORCE_LOGS=1 npm run e2e-test
