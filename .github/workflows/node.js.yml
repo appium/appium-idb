@@ -20,3 +20,49 @@ jobs:
     - run: npm install
     - run: npm run lint
     - run: npm run test
+
+  e2e:
+    runs-on: macos-11
+    env:
+      PLATFORM_VERSION: '15.2'
+      XCODE_VERSION: '13.2'
+      DEVICE_NAME: iPhone 11 Pro Max
+      NODE_VERSION: 14.x
+      PYTHON_VERSION: '3.7'
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: ${{ env.XCODE_VERSION }}
+    - run: xcrun simctl list
+    - run: brew install python@3.7
+    - run: |
+        brew install protobuf
+        brew install grpc
+
+        mkdir /tmp/protoc
+        pushd /tmp/protoc
+        curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v3.17.3/protoc-3.17.3-osx-x86_64.zip
+        unzip protoc-3.17.3-osx-x86_64.zip
+        chmod +x /tmp/protoc/bin/protoc
+        sudo ln -sf /tmp/protoc/bin/protoc /usr/local/bin/protoc
+
+        brew tap facebook/fb
+        brew install idb-companion || true
+
+        popd
+        sudo rm /usr/local/bin/protoc
+        rm -Rf /tmp/protoc
+
+        brew uninstall grpc
+        brew uninstall protobuf
+
+        /usr/local/opt/python@3.7/bin/python3.7 -m pip install --user fb-idb
+    - uses: actions/setup-node@v1
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+    - run: npm install
+    - run: |
+        export PATH="${PATH}:$(/usr/local/opt/python@3.7/bin/python3.7 -c 'import site; print(site.USER_BASE)')/bin"
+        _FORCE_LOGS=1 npm run e2e-test
