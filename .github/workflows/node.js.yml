@@ -42,7 +42,7 @@ jobs:
         brew install grpc
 
         mkdir /tmp/protoc
-        cd /tmp/protoc
+        pushd /tmp/protoc
         curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v3.17.3/protoc-3.17.3-osx-x86_64.zip
         unzip protoc-3.17.3-osx-x86_64.zip
         chmod +x /tmp/protoc/bin/protoc
@@ -51,7 +51,7 @@ jobs:
         brew tap facebook/fb
         brew install idb-companion || true
 
-        cd ~
+        popd
         sudo rm /usr/local/bin/protoc
         rm -Rf /tmp/protoc
 
