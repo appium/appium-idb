@@ -5,7 +5,7 @@ import { retryInterval } from 'asyncbox';
 import {
   prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS
 } from '../helpers/device-helpers';
-import IDB from '../..';
+import IDB from '../../lib/idb';
 
 
 chai.should();
