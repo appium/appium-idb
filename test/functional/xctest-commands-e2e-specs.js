@@ -13,7 +13,7 @@ chai.should();
 chai.use(chaiAsPromised);
 
 const WDA_BUNDLE_ID = 'com.apple.test.WebDriverAgentRunner-Runner';
-const WDA_BUNDLE_PATH = path.join(__dirname, '..', 'asset', 'WebDriverAgentRunner-Runner.app');
+const WDA_BUNDLE_PATH = path.resolve(__dirname, '..', 'asset', 'WebDriverAgentRunner-Runner.app');
 const XCTEST_BUNDLE_PATH = path.join(WDA_BUNDLE_PATH, 'PlugIns', 'WebDriverAgentRunner.xctest');
 const SAFARI_BUNDLE_ID = 'com.apple.mobilesafari';
 
