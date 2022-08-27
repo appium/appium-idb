@@ -15,7 +15,6 @@ async function assertDeviceDescription (idb, udid) {
 }
 
 describe('idb general', function () {
-  this.timeout(120000);
   let simctl;
 
   before(async function () {

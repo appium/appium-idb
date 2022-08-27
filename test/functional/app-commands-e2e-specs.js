@@ -14,7 +14,6 @@ chai.should();
 chai.use(chaiAsPromised);
 
 describe('idb app commands', function () {
-  this.timeout(120000);
   let idb;
   let simctl;
 

@@ -18,7 +18,6 @@ const XCTEST_BUNDLE_PATH = path.join(WDA_BUNDLE_PATH, 'PlugIns', 'WebDriverAgent
 const SAFARI_BUNDLE_ID = 'com.apple.mobilesafari';
 
 describe('idb xctest commands', function () {
-  this.timeout(120000);
   let simctl;
   let idb;
 

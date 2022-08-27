@@ -11,7 +11,6 @@ chai.should();
 chai.use(chaiAsPromised);
 
 describe('idb crashlog commands', function () {
-  this.timeout(120000);
   let idb;
   let simctl;
 
