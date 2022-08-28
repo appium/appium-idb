@@ -17,8 +17,7 @@ async function prepareDevice (opts = {}) {
     `appium-idb-tests-${util.uuidV4().toUpperCase()}`,
     model, platformVersion);
   if (prebooted) {
-    await simctl.bootDevice();
-    await simctl.startBootMonitor();
+    await simctl.startBootMonitor({shouldPreboot: true});
   }
   return simctl;
 }
