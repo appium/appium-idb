@@ -4,14 +4,13 @@ import chaiAsPromised from 'chai-as-promised';
 import {
   prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS
 } from '../helpers/device-helpers';
-import IDB from '../..';
+import IDB from '../../lib/idb';
 
 
 chai.should();
 chai.use(chaiAsPromised);
 
 describe('idb crashlog commands', function () {
-  this.timeout(120000);
   let idb;
   let simctl;
 

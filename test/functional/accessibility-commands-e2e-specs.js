@@ -5,14 +5,13 @@ import { retryInterval } from 'asyncbox';
 import {
   prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS
 } from '../helpers/device-helpers';
-import IDB from '../..';
+import IDB from '../../lib/idb';
 
 
 chai.should();
 chai.use(chaiAsPromised);
 
 describe('idb accessibility commands', function () {
-  this.timeout(120000);
   let idb;
   let simctl;
 

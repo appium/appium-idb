@@ -3,7 +3,7 @@ import chaiAsPromised from 'chai-as-promised';
 import {
   prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS
 } from '../helpers/device-helpers';
-import IDB from '../..';
+import IDB from '../../lib/idb';
 
 
 const should = chai.should();
@@ -15,7 +15,6 @@ async function assertDeviceDescription (idb, udid) {
 }
 
 describe('idb general', function () {
-  this.timeout(120000);
   let simctl;
 
   before(async function () {
