@@ -33,6 +33,8 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install
+    - run: |
+        npm install
+        npm i -g npm
     - run: npm run lint
     - run: npm run test
