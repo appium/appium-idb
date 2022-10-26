@@ -1,33 +1,14 @@
-name: Node.js CI
+name: Functional Tests
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x]
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run lint
-    - run: npm run test
-
   e2e:
     runs-on: macos-11
     env:
       PLATFORM_VERSION: '15.2'
       XCODE_VERSION: '13.2'
       DEVICE_NAME: iPhone 11 Pro Max
-      NODE_VERSION: 14.x
       PYTHON_VERSION: '3.7'
 
     steps:
@@ -59,9 +40,9 @@ jobs:
         brew uninstall protobuf
 
         /usr/local/opt/python@3.7/bin/python3.7 -m pip install --user fb-idb
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v3
       with:
-        node-version: ${{ env.NODE_VERSION }}
+        node-version: lts
     - run: npm install
     - run: |
         export PATH="${PATH}:$(/usr/local/opt/python@3.7/bin/python3.7 -c 'import site; print(site.USER_BASE)')/bin"
