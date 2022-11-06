@@ -37,7 +37,8 @@
     "index.js",
     "lib",
     "build/index.js",
-    "build/lib"
+    "build/lib",
+    "CHANGELOG.md"
   ],
   "dependencies": {
     "@appium/support": "^2.55.3",
