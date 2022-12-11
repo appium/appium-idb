@@ -32,6 +32,7 @@ describe('idb general', function () {
     before(async function () {
       idb = new IDB({
         udid: simctl.udid,
+        verbose: true,
       });
       await simctl.bootDevice();
       await simctl.startBootMonitor();
@@ -46,7 +47,7 @@ describe('idb general', function () {
 
     // TODO: getting the description returns data in a format that is a pain
     // to parse.
-    it.skip('should be able to call connect/disconnect multiple times', async function () {
+    it('should be able to call connect/disconnect multiple times', async function () {
       await idb.connect();
       await assertDeviceDescription(idb, simctl.udid);
       await idb.disconnect();
