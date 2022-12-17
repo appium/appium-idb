@@ -41,7 +41,7 @@
     "CHANGELOG.md"
   ],
   "dependencies": {
-    "@appium/support": "^2.55.3",
+    "@appium/support": "^3.0.0",
     "@babel/runtime": "^7.0.0",
     "asyncbox": "^2.5.2",
     "bluebird": "^3.1.1",
