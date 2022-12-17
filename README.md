@@ -8,8 +8,8 @@ appium-idb is NodeJS wrapper over iOS Device Bridge (idb) set of utilities made 
 
 - Python 3.6 or newer
 - XCode 10 or newer
-- idb_companion
-- idb
+- idb_companion 1.1.8 or newer
+- idb 1.1.7 or newer
 
 
 ## Installation
