@@ -1,3 +1,10 @@
+## [1.6.7](https://github.com/appium/appium-idb/compare/v1.6.6...v1.6.7) (2022-12-17)
+
+
+### Miscellaneous Chores
+
+* Bump @appium/support from 2.61.1 to 3.0.0 ([#62](https://github.com/appium/appium-idb/issues/62)) ([b539ab9](https://github.com/appium/appium-idb/commit/b539ab98ded4a0c6d26496eab2efeb7d2b4a6162))
+
 ## [1.6.6](https://github.com/appium/appium-idb/compare/v1.6.5...v1.6.6) (2022-12-11)
 
 
