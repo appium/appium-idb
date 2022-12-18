@@ -11,7 +11,7 @@ chai.use(chaiAsPromised);
 
 async function assertDeviceDescription (idb, udid) {
   const info = await idb.describeDevice();
-  info.target_description.udid.should.eql(udid);
+  info.udid.should.eql(udid);
 }
 
 describe('idb general', function () {

@@ -1,7 +1,7 @@
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
 import {
-  fixOutputToArray, fixOutputToObject, convertToIDBEnv
+  fixOutputToArray, convertToIDBEnv
 } from '../../lib/helpers';
 import _ from 'lodash';
 
@@ -42,50 +42,6 @@ describe('helpers', function () {
     });
   });
 
-  describe('fixOutputToObject', function () {
-    it('should properly fix the valid output', function () {
-      const result = fixOutputToObject(`
-      target_description {
-        udid: "14EBDEDE-0C9E-46B4-B1FF-0881F11D0E75"
-        name: "iPhone X\\312\\200"
-        screen_dimensions {
-          width: 828
-          height: 1792
-          density: 2.0
-          width_points: 414
-          height_points: 896
-        }
-        state: "shutdown"
-        target_type: "simulator"
-        os_version: "iOS 12.2"
-        architecture: "x86_64"
-      }
-      `);
-      result.should.eql({
-        target_description: {
-          udid: '14EBDEDE-0C9E-46B4-B1FF-0881F11D0E75',
-          name: 'iPhone X\\312\\200',
-          screen_dimensions: {
-            width: 828,
-            height: 1792,
-            density: 2.0,
-            width_points: 414,
-            height_points: 896,
-          },
-          state: 'shutdown',
-          target_type: 'simulator',
-          os_version: 'iOS 12.2',
-          architecture: 'x86_64',
-        }
-      });
-    });
-
-    it('should properly handle an empty output', function () {
-      const result = fixOutputToObject('');
-      _.isPlainObject(result).should.be.true;
-      _.isEmpty(result).should.be.true;
-    });
-  });
   describe('convertToIDBEnv', function () {
     it('should convert to idb env', function () {
       const convertedEnvs = convertToIDBEnv({FAKE: 'ENV'});

@@ -25,11 +25,9 @@ describe('idb misc commands', function () {
     await deleteDevice(simctl);
   });
 
-  // TODO: getting the description returns data in a format that is a pain
-  // to parse.
-  it.skip('describeDevice', async function () {
+  it('describeDevice', async function () {
     const info = await idb.describeDevice();
-    info.target_description.udid.should.eql(simctl.udid);
+    info.udid.should.eql(simctl.udid);
   });
 
   it('openUrl', async function () {
