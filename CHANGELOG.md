@@ -1,3 +1,10 @@
+## [1.6.8](https://github.com/appium/appium-idb/compare/v1.6.7...v1.6.8) (2022-12-18)
+
+
+### Bug Fixes
+
+* describeDevice fails to parse a valid json ([#64](https://github.com/appium/appium-idb/issues/64)) ([1668962](https://github.com/appium/appium-idb/commit/1668962bb4443a4abffa08f8bfd1d6f5c2613c2a))
+
 ## [1.6.7](https://github.com/appium/appium-idb/compare/v1.6.6...v1.6.7) (2022-12-17)
 
 
