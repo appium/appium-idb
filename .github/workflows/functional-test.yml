@@ -4,10 +4,10 @@ on: [pull_request]
 
 jobs:
   e2e:
-    runs-on: macos-11
+    runs-on: macos-12
     env:
-      PLATFORM_VERSION: '15.2'
-      XCODE_VERSION: '13.2'
+      PLATFORM_VERSION: '16.0'
+      XCODE_VERSION: '14.0'
       DEVICE_NAME: iPhone 11 Pro Max
       PYTHON_VERSION: '3.7'
 
