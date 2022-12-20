@@ -40,8 +40,7 @@ describe('idb app commands', function () {
   async function isMapsAppRunning () {
     const {stdout} = await simctl.spawnProcess([
       'launchctl',
-      'print',
-      'system',
+      'list',
     ]);
     return stdout.includes(`UIKitApplication:${MAPS_BUNDLE_ID}`);
   }
