@@ -6,90 +6,26 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		AdKQCVgu+kQPYrraHZk0nvHb0RU=
-		</data>
-		<key>XPCServices/LogArchiveCollector.xpc/Info.plist</key>
-		<data>
-		JwMIHni/EdOAatQ224suJ1+dZ5Q=
-		</data>
-		<key>XPCServices/LogArchiveCollector.xpc/LogArchiveCollector</key>
-		<data>
-		6r6P0UwyV4OqZfp8uRuCcXLHvvY=
-		</data>
-		<key>XPCServices/LogArchiveCollector.xpc/_CodeSignature/CodeResources</key>
-		<data>
-		p92DS4NIbZMvY0OPJu62b9/1sU0=
-		</data>
-		<key>XPCServices/LogArchiveCollector.xpc/version.plist</key>
-		<data>
-		xw1wNR30d0uNbLSxaGNoHbLwXZ0=
+		iwINMlRPx562/ipeZsG8y38Su10=
 		</data>
 		<key>version.plist</key>
 		<data>
-		ph88guKiS8ESpMndI0uwmxfIH+0=
+		149BWyGethYzoo9B/8Kcr9UmPyc=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>XPCServices/LogArchiveCollector.xpc/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			JwMIHni/EdOAatQ224suJ1+dZ5Q=
-			</data>
-			<key>hash2</key>
-			<data>
-			kqDZLgnNR3ymSfYIAdIJx9Ve67lvHQhbBTAvSEKpSUQ=
-			</data>
-		</dict>
-		<key>XPCServices/LogArchiveCollector.xpc/LogArchiveCollector</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			6r6P0UwyV4OqZfp8uRuCcXLHvvY=
-			</data>
-			<key>hash2</key>
-			<data>
-			1SOpRwfK7uuL9XtebA+g5lXXoKDOeJnkRrkLlR7uKsQ=
-			</data>
-		</dict>
-		<key>XPCServices/LogArchiveCollector.xpc/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			p92DS4NIbZMvY0OPJu62b9/1sU0=
-			</data>
-			<key>hash2</key>
-			<data>
-			C9htH2fPcOVvWuDaWQ0HjXnbM4CirOR1MUKi48sc6lc=
-			</data>
-		</dict>
-		<key>XPCServices/LogArchiveCollector.xpc/version.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			xw1wNR30d0uNbLSxaGNoHbLwXZ0=
-			</data>
-			<key>hash2</key>
-			<data>
-			J7NoKPHvwJvrz8RBb/E1HbMjD548n2vtVKDpZozYkbc=
-			</data>
-		</dict>
 		<key>version.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ph88guKiS8ESpMndI0uwmxfIH+0=
-			</data>
 			<key>hash2</key>
 			<data>
-			wGJnOOyNjLK4Ej9fSzr0dSvgTZvsi55zvOyNcBkmfas=
+			UkVf3BvN+nSmvUvPw4/0F8bKLRTbm9lq8SNl294LEuQ=
 			</data>
 		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -120,24 +56,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -173,13 +97,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>
