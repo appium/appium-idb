@@ -6,11 +6,23 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		jhfq6d3u5IBFP/SjC2DbUbUC9g8=
+		tbcp3eUK9xFB5MoIICaWqoCFX9I=
+		</data>
+		<key>version.plist</key>
+		<data>
+		149BWyGethYzoo9B/8Kcr9UmPyc=
 		</data>
 	</dict>
 	<key>files2</key>
-	<dict/>
+	<dict>
+		<key>version.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UkVf3BvN+nSmvUvPw4/0F8bKLRTbm9lq8SNl294LEuQ=
+			</data>
+		</dict>
+	</dict>
 	<key>rules</key>
 	<dict>
 		<key>^.*</key>

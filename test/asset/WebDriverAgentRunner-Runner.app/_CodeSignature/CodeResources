@@ -6,575 +6,354 @@
 	<dict>
 		<key>Frameworks/XCTAutomationSupport.framework/Info.plist</key>
 		<data>
-		AdKQCVgu+kQPYrraHZk0nvHb0RU=
+		iwINMlRPx562/ipeZsG8y38Su10=
 		</data>
 		<key>Frameworks/XCTAutomationSupport.framework/XCTAutomationSupport</key>
 		<data>
-		GwWBYHmtIC5nM9L567YjKxjxUO4=
-		</data>
-		<key>Frameworks/XCTAutomationSupport.framework/XPCServices/LogArchiveCollector.xpc/Info.plist</key>
-		<data>
-		JwMIHni/EdOAatQ224suJ1+dZ5Q=
-		</data>
-		<key>Frameworks/XCTAutomationSupport.framework/XPCServices/LogArchiveCollector.xpc/LogArchiveCollector</key>
-		<data>
-		6r6P0UwyV4OqZfp8uRuCcXLHvvY=
-		</data>
-		<key>Frameworks/XCTAutomationSupport.framework/XPCServices/LogArchiveCollector.xpc/_CodeSignature/CodeResources</key>
-		<data>
-		p92DS4NIbZMvY0OPJu62b9/1sU0=
-		</data>
-		<key>Frameworks/XCTAutomationSupport.framework/XPCServices/LogArchiveCollector.xpc/version.plist</key>
-		<data>
-		xw1wNR30d0uNbLSxaGNoHbLwXZ0=
+		B0dnVpo5PJomIosjs8k9MHEKf2U=
 		</data>
 		<key>Frameworks/XCTAutomationSupport.framework/_CodeSignature/CodeResources</key>
 		<data>
-		yurPxzU8RrW0ci+3MIuO3M8Aqmk=
+		6omCS0fnKqghWYqMRfwFgK1W634=
 		</data>
 		<key>Frameworks/XCTAutomationSupport.framework/version.plist</key>
 		<data>
-		ph88guKiS8ESpMndI0uwmxfIH+0=
+		149BWyGethYzoo9B/8Kcr9UmPyc=
 		</data>
 		<key>Frameworks/XCTest.framework/Info.plist</key>
 		<data>
-		BzLsBYpQlEle0+r94iOQ4dN0BFU=
+		7DXmjQMfEsvJQuVzRn8OFaaBWts=
 		</data>
 		<key>Frameworks/XCTest.framework/XCTest</key>
 		<data>
-		PRzeq60zTFuBhE7Fg4wAJnOX9nM=
+		vWFHKhf4gr6nkvxfpCMb5r5ZqmE=
 		</data>
 		<key>Frameworks/XCTest.framework/_CodeSignature/CodeResources</key>
 		<data>
-		7n5oRI2o67livUgKowi9dL1ewUQ=
+		w3wkZeFRzA3faTNlU6+3ORZn3Ck=
 		</data>
-		<key>Frameworks/XCTest.framework/en.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			TuBj57ZP6zBqcL9HttO2Rucaw9E=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>Frameworks/XCTest.framework/version.plist</key>
 		<data>
-		ph88guKiS8ESpMndI0uwmxfIH+0=
+		149BWyGethYzoo9B/8Kcr9UmPyc=
+		</data>
+		<key>Frameworks/XCTestCore.framework/Info.plist</key>
+		<data>
+		Eq7nWCPNfH5RN1F+aq6M68PY6Wk=
+		</data>
+		<key>Frameworks/XCTestCore.framework/XCTestCore</key>
+		<data>
+		LJUk4ip4LEVQRO1ZCZONAX8X3dM=
+		</data>
+		<key>Frameworks/XCTestCore.framework/_CodeSignature/CodeResources</key>
+		<data>
+		1qTwsVCL92um7fxLbYiylh1x+Ro=
+		</data>
+		<key>Frameworks/XCTestCore.framework/version.plist</key>
+		<data>
+		149BWyGethYzoo9B/8Kcr9UmPyc=
+		</data>
+		<key>Frameworks/XCTestSupport.framework/Info.plist</key>
+		<data>
+		vUCe0AwNlsesvePS0DFgeaU8wHo=
+		</data>
+		<key>Frameworks/XCTestSupport.framework/XCTestSupport</key>
+		<data>
+		vll7vJP1TEb5SN54KE6A+H/O37s=
+		</data>
+		<key>Frameworks/XCTestSupport.framework/_CodeSignature/CodeResources</key>
+		<data>
+		pcGll14hf/+PP2XdtD/EElH8+AQ=
+		</data>
+		<key>Frameworks/XCTestSupport.framework/version.plist</key>
+		<data>
+		149BWyGethYzoo9B/8Kcr9UmPyc=
+		</data>
+		<key>Frameworks/XCUIAutomation.framework/Info.plist</key>
+		<data>
+		3wjhuxR2yWaNcBv9CR1X5kTAm/s=
+		</data>
+		<key>Frameworks/XCUIAutomation.framework/XCUIAutomation</key>
+		<data>
+		eACbMJvFbJAzTykUVjzaHmiEflg=
+		</data>
+		<key>Frameworks/XCUIAutomation.framework/_CodeSignature/CodeResources</key>
+		<data>
+		bjr36u+UNXSSwdDHvAUhUVx+x2g=
+		</data>
+		<key>Frameworks/XCUIAutomation.framework/version.plist</key>
+		<data>
+		149BWyGethYzoo9B/8Kcr9UmPyc=
+		</data>
+		<key>Frameworks/XCUnit.framework/Info.plist</key>
+		<data>
+		tbcp3eUK9xFB5MoIICaWqoCFX9I=
+		</data>
+		<key>Frameworks/XCUnit.framework/XCUnit</key>
+		<data>
+		ox6aQpJ0ZmNZ2TYna7PzoYA+81M=
+		</data>
+		<key>Frameworks/XCUnit.framework/_CodeSignature/CodeResources</key>
+		<data>
+		ZMm1YrmoJaEfEcSjBG/dz6AHvYM=
+		</data>
+		<key>Frameworks/XCUnit.framework/version.plist</key>
+		<data>
+		149BWyGethYzoo9B/8Kcr9UmPyc=
+		</data>
+		<key>Frameworks/libXCTestSwiftSupport.dylib</key>
+		<data>
+		DUuiBL3psJS0+RXbnUwUa4F04e0=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		0SZAbwBcfh1sakPKP5fJ0aYCOVU=
+		684tChNtI6OZAXR7151fLbPMISE=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/CocoaAsyncSocket.framework/CocoaAsyncSocket</key>
-		<data>
-		56JB85rRFGBq086HvbHgB+1yJNw=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/CocoaAsyncSocket.framework/Info.plist</key>
-		<data>
-		vhPG+RalCO/vFSFMC77VXLOHcAo=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/CocoaAsyncSocket.framework/_CodeSignature/CodeResources</key>
-		<data>
-		dqWrRxOCyABfEdWkbNVxLRYIAgU=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/RoutingHTTPServer.framework/Info.plist</key>
-		<data>
-		m4o8aFIXDLGpVF+2MzliOnJdQcI=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/RoutingHTTPServer.framework/RoutingHTTPServer</key>
-		<data>
-		BOAUaqNYii8406rot3x8M8ikfU8=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/RoutingHTTPServer.framework/_CodeSignature/CodeResources</key>
-		<data>
-		SzOY9BfaO2Bfganfbon2/Uq2nzg=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/CocoaAsyncSocket.framework/CocoaAsyncSocket</key>
-		<data>
-		56JB85rRFGBq086HvbHgB+1yJNw=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/CocoaAsyncSocket.framework/Info.plist</key>
-		<data>
-		vhPG+RalCO/vFSFMC77VXLOHcAo=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/CocoaAsyncSocket.framework/_CodeSignature/CodeResources</key>
-		<data>
-		dqWrRxOCyABfEdWkbNVxLRYIAgU=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/RoutingHTTPServer.framework/Info.plist</key>
-		<data>
-		m4o8aFIXDLGpVF+2MzliOnJdQcI=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/RoutingHTTPServer.framework/RoutingHTTPServer</key>
-		<data>
-		BOAUaqNYii8406rot3x8M8ikfU8=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/RoutingHTTPServer.framework/_CodeSignature/CodeResources</key>
-		<data>
-		SzOY9BfaO2Bfganfbon2/Uq2nzg=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/YYCache.framework/Info.plist</key>
-		<data>
-		nPfCWkNZQu4EU2mnvP4hI6vcKI8=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/YYCache.framework/YYCache</key>
-		<data>
-		V4vNit4epVCdTY67n1j1YEEnGPo=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/YYCache.framework/_CodeSignature/CodeResources</key>
-		<data>
-		yJW6BmKlq+y4pJIMQH91MOwvT38=
-		</data>
 		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Info.plist</key>
 		<data>
-		C44fivE18109pnXICF0cYy+lyZ8=
+		jhfq6d3u5IBFP/SjC2DbUbUC9g8=
 		</data>
 		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/WebDriverAgentLib</key>
 		<data>
-		UaS/ErmtMVHA18f3+K621m95Sl8=
+		SB1+knf3tvGiepP5v8nnm41Q7rA=
 		</data>
 		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/_CodeSignature/CodeResources</key>
 		<data>
-		zULDiQynq42DKk38kumcKsLqAAk=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/YYCache.framework/Info.plist</key>
-		<data>
-		nPfCWkNZQu4EU2mnvP4hI6vcKI8=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/YYCache.framework/YYCache</key>
-		<data>
-		V4vNit4epVCdTY67n1j1YEEnGPo=
-		</data>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/YYCache.framework/_CodeSignature/CodeResources</key>
-		<data>
-		yJW6BmKlq+y4pJIMQH91MOwvT38=
+		/PkLg3vByNTUpfzwSa757Es4TEQ=
 		</data>
 		<key>PlugIns/WebDriverAgentRunner.xctest/Info.plist</key>
 		<data>
-		LceSAHLJgv4HRTlQVIKa7840W2E=
+		/uOT0/XEKlF6C1BZPjdoqa+pYhU=
 		</data>
 		<key>PlugIns/WebDriverAgentRunner.xctest/WebDriverAgentRunner</key>
 		<data>
-		NGVG9IIsjvW4OKT3/NWl0xQaofw=
+		ykojx2ZKaLuDEAPeKOMlIZv4v3U=
 		</data>
 		<key>PlugIns/WebDriverAgentRunner.xctest/_CodeSignature/CodeResources</key>
 		<data>
-		wdb0cGb3uJzSrgT2p62B+X8O1yM=
+		656VAQSvxrczfREX36O6zFRLT+Y=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Frameworks/XCTAutomationSupport.framework/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			AdKQCVgu+kQPYrraHZk0nvHb0RU=
-			</data>
 			<key>hash2</key>
 			<data>
-			Juqo5ACp6kxMxaTKCklnzdXbH9XVDsxwrkjZmb2Gw0A=
+			mvhv4ru5rIPhjcsZLEXrPqu9sHy7PdM1n3jUQRb6uPY=
 			</data>
 		</dict>
 		<key>Frameworks/XCTAutomationSupport.framework/XCTAutomationSupport</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			GwWBYHmtIC5nM9L567YjKxjxUO4=
-			</data>
 			<key>hash2</key>
 			<data>
-			9Ia3Jdmibv3ZwLXG2JkOog4+CGSPf2aBpcE7q+DElh0=
-			</data>
-		</dict>
-		<key>Frameworks/XCTAutomationSupport.framework/XPCServices/LogArchiveCollector.xpc/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			JwMIHni/EdOAatQ224suJ1+dZ5Q=
-			</data>
-			<key>hash2</key>
-			<data>
-			kqDZLgnNR3ymSfYIAdIJx9Ve67lvHQhbBTAvSEKpSUQ=
-			</data>
-		</dict>
-		<key>Frameworks/XCTAutomationSupport.framework/XPCServices/LogArchiveCollector.xpc/LogArchiveCollector</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			6r6P0UwyV4OqZfp8uRuCcXLHvvY=
-			</data>
-			<key>hash2</key>
-			<data>
-			1SOpRwfK7uuL9XtebA+g5lXXoKDOeJnkRrkLlR7uKsQ=
-			</data>
-		</dict>
-		<key>Frameworks/XCTAutomationSupport.framework/XPCServices/LogArchiveCollector.xpc/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			p92DS4NIbZMvY0OPJu62b9/1sU0=
-			</data>
-			<key>hash2</key>
-			<data>
-			C9htH2fPcOVvWuDaWQ0HjXnbM4CirOR1MUKi48sc6lc=
-			</data>
-		</dict>
-		<key>Frameworks/XCTAutomationSupport.framework/XPCServices/LogArchiveCollector.xpc/version.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			xw1wNR30d0uNbLSxaGNoHbLwXZ0=
-			</data>
-			<key>hash2</key>
-			<data>
-			J7NoKPHvwJvrz8RBb/E1HbMjD548n2vtVKDpZozYkbc=
+			dPxIuQKLPAvzM+XJ/p1/T2zSkSpzi/BoGYK5x3zCGTo=
 			</data>
 		</dict>
 		<key>Frameworks/XCTAutomationSupport.framework/_CodeSignature/CodeResources</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			yurPxzU8RrW0ci+3MIuO3M8Aqmk=
-			</data>
 			<key>hash2</key>
 			<data>
-			OBAhDxWLr1mkeZOTFiFsqIbeRdzzHxvQJzpRkj4ch94=
+			+z3pA2RwodHqcPbD8Gktan2vbWHmMlk7MjBTmktQR8M=
 			</data>
 		</dict>
 		<key>Frameworks/XCTAutomationSupport.framework/version.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ph88guKiS8ESpMndI0uwmxfIH+0=
-			</data>
 			<key>hash2</key>
 			<data>
-			wGJnOOyNjLK4Ej9fSzr0dSvgTZvsi55zvOyNcBkmfas=
+			UkVf3BvN+nSmvUvPw4/0F8bKLRTbm9lq8SNl294LEuQ=
 			</data>
 		</dict>
 		<key>Frameworks/XCTest.framework/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			BzLsBYpQlEle0+r94iOQ4dN0BFU=
-			</data>
 			<key>hash2</key>
 			<data>
-			pDPOvaQBiKZJ1ZDFNU8RBkBQFqn/0be7PLr4l7NX58A=
+			kLw/zJqSi3gQi0v+rrpbCRRsuYMrIa6krAfmad4fU9o=
 			</data>
 		</dict>
 		<key>Frameworks/XCTest.framework/XCTest</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			PRzeq60zTFuBhE7Fg4wAJnOX9nM=
-			</data>
 			<key>hash2</key>
 			<data>
-			HIM6xMGNpiVKK8DLwbL5SeEpbnq9EkJZvVurRfWIcqc=
+			RCOnUA6WAh7rxoK51oOfOZSQPD3ys0w6rvYD898YyWM=
 			</data>
 		</dict>
 		<key>Frameworks/XCTest.framework/_CodeSignature/CodeResources</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			7n5oRI2o67livUgKowi9dL1ewUQ=
-			</data>
 			<key>hash2</key>
 			<data>
-			q4ZWx98dZ+KsJnqbUrMWzAT6BiOuVD5NVBVZ0DS8q2g=
+			4n3/Yp7NFIihcR4GPk2ngcJHkdQNY9z/Pv57P20oQys=
 			</data>
-		</dict>
-		<key>Frameworks/XCTest.framework/en.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			TuBj57ZP6zBqcL9HttO2Rucaw9E=
-			</data>
-			<key>hash2</key>
-			<data>
-			89RGkjZaKuewYnjpzwhIswhqfrU8+pcEXqM/DHVrUmo=
-			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>Frameworks/XCTest.framework/version.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ph88guKiS8ESpMndI0uwmxfIH+0=
-			</data>
 			<key>hash2</key>
 			<data>
-			wGJnOOyNjLK4Ej9fSzr0dSvgTZvsi55zvOyNcBkmfas=
+			UkVf3BvN+nSmvUvPw4/0F8bKLRTbm9lq8SNl294LEuQ=
 			</data>
 		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/CocoaAsyncSocket.framework/CocoaAsyncSocket</key>
+		<key>Frameworks/XCTestCore.framework/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			56JB85rRFGBq086HvbHgB+1yJNw=
-			</data>
 			<key>hash2</key>
 			<data>
-			doKuT8HBJBmjc9YrWoz/hPQlyNEeU08QTt+m3JhBLag=
+			ksVeqZMAzdZkz4tJU9QjePo2p/nhTEw3S/LHzT1pfG4=
 			</data>
 		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/CocoaAsyncSocket.framework/Info.plist</key>
+		<key>Frameworks/XCTestCore.framework/XCTestCore</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			vhPG+RalCO/vFSFMC77VXLOHcAo=
-			</data>
 			<key>hash2</key>
 			<data>
-			dKQfpd0Z8QlSGcEXPn0/oI9LoL96CqfggWZaFEFeL7s=
+			5dFKppoPya+xQihS4SvG2fogUxy1h5H+9XIMzrRxiZc=
 			</data>
 		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/CocoaAsyncSocket.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/XCTestCore.framework/_CodeSignature/CodeResources</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			dqWrRxOCyABfEdWkbNVxLRYIAgU=
-			</data>
 			<key>hash2</key>
 			<data>
-			awT9Y5xUFlwba18Cbb+DeIXmwlPwt1eNru1aRLsjFhs=
+			HtJGi1M9BJQp3P91bAAB/QBr1/6XPP0ZK/OxjN6oGWQ=
 			</data>
 		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/RoutingHTTPServer.framework/Info.plist</key>
+		<key>Frameworks/XCTestCore.framework/version.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			m4o8aFIXDLGpVF+2MzliOnJdQcI=
-			</data>
 			<key>hash2</key>
 			<data>
-			2olk6MJUHgFMr/88ebDhXXwqi9HOcBZXaOQtSsd27oQ=
+			UkVf3BvN+nSmvUvPw4/0F8bKLRTbm9lq8SNl294LEuQ=
 			</data>
 		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/RoutingHTTPServer.framework/RoutingHTTPServer</key>
+		<key>Frameworks/XCTestSupport.framework/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			BOAUaqNYii8406rot3x8M8ikfU8=
-			</data>
 			<key>hash2</key>
 			<data>
-			O/e2rqH05HgXV0HaGskL1DHE5RohuxTaSJf0XQ9gCcI=
+			5PXwphpDvVvrMPecT5gDOIeRp+4OhhoMi+Zbt5Jy8qE=
 			</data>
 		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/RoutingHTTPServer.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/XCTestSupport.framework/XCTestSupport</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			SzOY9BfaO2Bfganfbon2/Uq2nzg=
-			</data>
 			<key>hash2</key>
 			<data>
-			j1PjSfEYq5drR+nyILn+M56fQhH/21gQxI+MDJUgBSc=
+			tk6JEEi1KKk6tESN59RuT9APaWetJPfQE8ZvH1yv/6E=
 			</data>
 		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/CocoaAsyncSocket.framework/CocoaAsyncSocket</key>
+		<key>Frameworks/XCTestSupport.framework/_CodeSignature/CodeResources</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			56JB85rRFGBq086HvbHgB+1yJNw=
-			</data>
 			<key>hash2</key>
 			<data>
-			doKuT8HBJBmjc9YrWoz/hPQlyNEeU08QTt+m3JhBLag=
+			Yxmxu8Q8Or8Rjre4XRH3d25fgtF/Qu/rokiMRz7hIkw=
 			</data>
 		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/CocoaAsyncSocket.framework/Info.plist</key>
+		<key>Frameworks/XCTestSupport.framework/version.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			vhPG+RalCO/vFSFMC77VXLOHcAo=
-			</data>
 			<key>hash2</key>
 			<data>
-			dKQfpd0Z8QlSGcEXPn0/oI9LoL96CqfggWZaFEFeL7s=
+			UkVf3BvN+nSmvUvPw4/0F8bKLRTbm9lq8SNl294LEuQ=
 			</data>
 		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/CocoaAsyncSocket.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/XCUIAutomation.framework/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			dqWrRxOCyABfEdWkbNVxLRYIAgU=
-			</data>
 			<key>hash2</key>
 			<data>
-			awT9Y5xUFlwba18Cbb+DeIXmwlPwt1eNru1aRLsjFhs=
+			YflBCppxjzAf44XdTroZ2iRMnocPJUBAILl+7/qZ1t8=
 			</data>
 		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/RoutingHTTPServer.framework/Info.plist</key>
+		<key>Frameworks/XCUIAutomation.framework/XCUIAutomation</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			m4o8aFIXDLGpVF+2MzliOnJdQcI=
-			</data>
 			<key>hash2</key>
 			<data>
-			2olk6MJUHgFMr/88ebDhXXwqi9HOcBZXaOQtSsd27oQ=
+			AKNeg33E0Y0SzU++SCFEQxUpm5pvpYju7Ipw75ZknFc=
 			</data>
 		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/RoutingHTTPServer.framework/RoutingHTTPServer</key>
+		<key>Frameworks/XCUIAutomation.framework/_CodeSignature/CodeResources</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			BOAUaqNYii8406rot3x8M8ikfU8=
-			</data>
 			<key>hash2</key>
 			<data>
-			O/e2rqH05HgXV0HaGskL1DHE5RohuxTaSJf0XQ9gCcI=
+			Wf7DGRSDMMtLnI2mltxYZvRf1vvUjJSlxK0j6kubnhM=
 			</data>
 		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/RoutingHTTPServer.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/XCUIAutomation.framework/version.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			SzOY9BfaO2Bfganfbon2/Uq2nzg=
-			</data>
 			<key>hash2</key>
 			<data>
-			j1PjSfEYq5drR+nyILn+M56fQhH/21gQxI+MDJUgBSc=
+			UkVf3BvN+nSmvUvPw4/0F8bKLRTbm9lq8SNl294LEuQ=
 			</data>
 		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/YYCache.framework/Info.plist</key>
+		<key>Frameworks/XCUnit.framework/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			nPfCWkNZQu4EU2mnvP4hI6vcKI8=
-			</data>
 			<key>hash2</key>
 			<data>
-			1op1Z0dhp6OCbstIwsqNkhYkAxWZstdMlLUOy6yOq6U=
+			A2NFQE0ZhghbOsMxH0oOPktGHu6Wc/hFsbXGZbhHx2E=
 			</data>
 		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/YYCache.framework/YYCache</key>
+		<key>Frameworks/XCUnit.framework/XCUnit</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			V4vNit4epVCdTY67n1j1YEEnGPo=
-			</data>
 			<key>hash2</key>
 			<data>
-			5I3GIWtW5Mnt0/Br0ssXBhVmIrqFuXvtfhGR6iaWBWE=
+			/MYtiC7spneUgbKCIT8uX2qeH5uukVVAgpWwOjCkrz4=
 			</data>
 		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Frameworks/YYCache.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/XCUnit.framework/_CodeSignature/CodeResources</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			yJW6BmKlq+y4pJIMQH91MOwvT38=
-			</data>
 			<key>hash2</key>
 			<data>
-			9ftkiu+DtYevHPmnoCxR12lqg070CkIjeOvNjyMN2c0=
+			zbL4CMr8yR9HqAQWWizeR0I+a4gOMwkAyFBIjQOlu64=
+			</data>
+		</dict>
+		<key>Frameworks/XCUnit.framework/version.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UkVf3BvN+nSmvUvPw4/0F8bKLRTbm9lq8SNl294LEuQ=
+			</data>
+		</dict>
+		<key>Frameworks/libXCTestSwiftSupport.dylib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wbpTkXAINf8PYQLa0QE0v4HjwOF4paNeMAHd/4Zb/gU=
 			</data>
 		</dict>
 		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			C44fivE18109pnXICF0cYy+lyZ8=
-			</data>
 			<key>hash2</key>
 			<data>
-			VaZJ9flgS/PEmKc0UsuP55SwoYxvoq7+D6szSPnNhJo=
+			gZBh20ehn8Bj6yoGzsqmKCuioYrPgALapySDIGti/Qw=
 			</data>
 		</dict>
 		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/WebDriverAgentLib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			UaS/ErmtMVHA18f3+K621m95Sl8=
-			</data>
 			<key>hash2</key>
 			<data>
-			Mv2u9G2cRnFjxNAr/rRwl8YgnSFngTf8BBLK8jPpvjo=
+			19ENJpghIrrtHO9gdHiNwDB0U3pozrXgCQHnpqeMO+g=
 			</data>
 		</dict>
 		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/WebDriverAgentLib.framework/_CodeSignature/CodeResources</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			zULDiQynq42DKk38kumcKsLqAAk=
-			</data>
 			<key>hash2</key>
 			<data>
-			oMjuKpNlfGdQP3FLPgy48D48Gwqq77I/d5YfGQm7jM4=
-			</data>
-		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/YYCache.framework/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			nPfCWkNZQu4EU2mnvP4hI6vcKI8=
-			</data>
-			<key>hash2</key>
-			<data>
-			1op1Z0dhp6OCbstIwsqNkhYkAxWZstdMlLUOy6yOq6U=
-			</data>
-		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/YYCache.framework/YYCache</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			V4vNit4epVCdTY67n1j1YEEnGPo=
-			</data>
-			<key>hash2</key>
-			<data>
-			5I3GIWtW5Mnt0/Br0ssXBhVmIrqFuXvtfhGR6iaWBWE=
-			</data>
-		</dict>
-		<key>PlugIns/WebDriverAgentRunner.xctest/Frameworks/YYCache.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			yJW6BmKlq+y4pJIMQH91MOwvT38=
-			</data>
-			<key>hash2</key>
-			<data>
-			9ftkiu+DtYevHPmnoCxR12lqg070CkIjeOvNjyMN2c0=
+			UTM36eWLTSFr1Of+EO3VHUcjFRrQvivZb8qDLAdm3Zw=
 			</data>
 		</dict>
 		<key>PlugIns/WebDriverAgentRunner.xctest/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			LceSAHLJgv4HRTlQVIKa7840W2E=
-			</data>
 			<key>hash2</key>
 			<data>
-			Zz9TviERWyEhOOdk2ATRrUrlsqt5vbvfqgJsNu1zYpo=
+			QoXQN6UxmLov/hiBZIjvCY/gDuZaDpd701AqLVrmYCw=
 			</data>
 		</dict>
 		<key>PlugIns/WebDriverAgentRunner.xctest/WebDriverAgentRunner</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			NGVG9IIsjvW4OKT3/NWl0xQaofw=
-			</data>
 			<key>hash2</key>
 			<data>
-			6T40IyzGIkYQGroWHls8C0BEeoDC2jS3i2FC4TKdUCk=
+			MLGNfhGEyTnBDFMn0qPdXSnZb3uNd9XB0GVEmL0b5xY=
 			</data>
 		</dict>
 		<key>PlugIns/WebDriverAgentRunner.xctest/_CodeSignature/CodeResources</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			wdb0cGb3uJzSrgT2p62B+X8O1yM=
-			</data>
 			<key>hash2</key>
 			<data>
-			Oe7Z3WamqV9mibuipuPQvq6f+yiL7CfOBRorsIBCBOY=
+			V0+Tkm50bN0zG7rd3uHcL4OnHuIYSOxq1/55KwCZcdU=
 			</data>
 		</dict>
 	</dict>
