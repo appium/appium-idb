@@ -1,15 +1,12 @@
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
-import {
-  prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS
-} from '../helpers/device-helpers';
+import {prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS} from '../helpers/device-helpers';
 import IDB from '../../lib/idb';
-
 
 const should = chai.should();
 chai.use(chaiAsPromised);
 
-async function assertDeviceDescription (idb, udid) {
+async function assertDeviceDescription(idb, udid) {
   const info = await idb.describeDevice();
   info.udid.should.eql(udid);
 }
@@ -45,9 +42,7 @@ describe('idb general', function () {
       } catch (ign) {}
     });
 
-    // TODO: getting the description returns data in a format that is a pain
-    // to parse.
-    it.skip('should be able to call connect/disconnect multiple times', async function () {
+    it('should be able to call connect/disconnect multiple times', async function () {
       await idb.connect();
       await assertDeviceDescription(idb, simctl.udid);
       await idb.disconnect();
@@ -60,6 +55,7 @@ describe('idb general', function () {
     before(async function () {
       idb = new IDB({
         udid: simctl.udid,
+        verbose: true,
       });
       await simctl.shutdownDevice({timeout: ONLINE_TIMEOUT_MS});
     });
@@ -75,8 +71,8 @@ describe('idb general', function () {
       } catch (e) {}
     });
 
-    it('should not be able to call connect multiple times', async function () {
-      await idb.connect().should.be.rejected;
+    it('should be able to call connect multiple times', async function () {
+      await idb.connect().should.be.fulfilled;
     });
 
     it('should be able to call disconnect multiple times', async function () {
