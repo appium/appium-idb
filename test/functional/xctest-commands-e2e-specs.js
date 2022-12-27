@@ -25,6 +25,7 @@ describe('idb xctest commands', function () {
     simctl = await prepareDevice();
     idb = new IDB({
       udid: simctl.udid,
+      verbose: true,
     });
     await idb.connect({onlineTimeout: ONLINE_TIMEOUT_MS});
   });
@@ -41,7 +42,7 @@ describe('idb xctest commands', function () {
     installedXctestBundleIds.should.includes(xctestBundleId);
     const process = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId);
     try {
-      await retryInterval(10, 1000, async () => await axios({
+      await retryInterval(30, 1000, async () => await axios({
         url: 'http://localhost:8100/status',
         timeout: 300,
       }));
@@ -60,7 +61,7 @@ describe('idb xctest commands', function () {
     const process = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId,
         { env: { USE_PORT: port }, testType: 'ui'});
     try {
-      await retryInterval(10, 1000, async () => await axios({
+      await retryInterval(30, 1000, async () => await axios({
         url: `http://localhost:${port}/status`,
         timeout: 300,
       }));
