@@ -1,3 +1,10 @@
+## [1.6.9](https://github.com/appium/appium-idb/compare/v1.6.8...v1.6.9) (2022-12-27)
+
+
+### Bug Fixes
+
+* stop manually starting a companion process ([#65](https://github.com/appium/appium-idb/issues/65)) ([aaeefb3](https://github.com/appium/appium-idb/commit/aaeefb38535c7bb3b64c301cd8d8b1e223199d0c))
+
 ## [1.6.8](https://github.com/appium/appium-idb/compare/v1.6.7...v1.6.8) (2022-12-18)
 
 
