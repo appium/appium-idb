@@ -1,3 +1,10 @@
+## [1.6.12](https://github.com/appium/appium-idb/compare/v1.6.11...v1.6.12) (2023-06-07)
+
+
+### Miscellaneous Chores
+
+* Bump conventional-changelog-conventionalcommits ([#75](https://github.com/appium/appium-idb/issues/75)) ([e352264](https://github.com/appium/appium-idb/commit/e352264bcca94cc8078cd3338d16d078a4609425))
+
 ## [1.6.11](https://github.com/appium/appium-idb/compare/v1.6.10...v1.6.11) (2023-05-18)
 
 
