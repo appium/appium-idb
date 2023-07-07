@@ -1,3 +1,10 @@
+## [1.6.13](https://github.com/appium/appium-idb/compare/v1.6.12...v1.6.13) (2023-07-07)
+
+
+### Miscellaneous Chores
+
+* Bump prettier from 2.8.8 to 3.0.0 ([#79](https://github.com/appium/appium-idb/issues/79)) ([77745fc](https://github.com/appium/appium-idb/commit/77745fc748b7ce7cfe826b5dd75f5524a5bd853a))
+
 ## [1.6.12](https://github.com/appium/appium-idb/compare/v1.6.11...v1.6.12) (2023-06-07)
 
 
