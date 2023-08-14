@@ -1,3 +1,10 @@
+## [1.6.14](https://github.com/appium/appium-idb/compare/v1.6.13...v1.6.14) (2023-08-14)
+
+
+### Miscellaneous Chores
+
+* Bump lint-staged from 13.3.0 to 14.0.0 ([#80](https://github.com/appium/appium-idb/issues/80)) ([b330486](https://github.com/appium/appium-idb/commit/b33048626904b6f05605fdb4a2188eaa6d8f63ae))
+
 ## [1.6.13](https://github.com/appium/appium-idb/compare/v1.6.12...v1.6.13) (2023-07-07)
 
 
