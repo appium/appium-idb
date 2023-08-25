@@ -1,3 +1,10 @@
+## [1.6.15](https://github.com/appium/appium-idb/compare/v1.6.14...v1.6.15) (2023-08-25)
+
+
+### Miscellaneous Chores
+
+* Bump semantic-release from 20.1.3 to 21.1.0 ([#82](https://github.com/appium/appium-idb/issues/82)) ([b259d78](https://github.com/appium/appium-idb/commit/b259d789301667e4a2a2331e91f8d5b32a0f7d78))
+
 ## [1.6.14](https://github.com/appium/appium-idb/compare/v1.6.13...v1.6.14) (2023-08-14)
 
 
