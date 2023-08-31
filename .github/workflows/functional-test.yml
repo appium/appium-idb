@@ -6,31 +6,33 @@ jobs:
   e2e:
     runs-on: macos-12
     env:
+      CI: true
       PLATFORM_VERSION: '16.0'
       XCODE_VERSION: '14.0'
       DEVICE_NAME: iPhone 11 Pro Max
-      PYTHON_VERSION: '3.7'
+      PYTHON_VERSION: '3.9'
 
     steps:
     - uses: actions/checkout@v2
     - uses: maxim-lobanov/setup-xcode@v1
       with:
         xcode-version: ${{ env.XCODE_VERSION }}
-    - run: xcrun simctl list
-    - run: brew install python@3.7
+    - run: |
+        target_sim_id=$(xcrun simctl list devices available | grep "$DEVICE_NAME (" | cut -d "(" -f2 | cut -d ")" -f1)
+        open -Fn "$(xcode-select -p)/Applications/Simulator.app"
+        xcrun simctl bootstatus $target_sim_id -b
+        xcrun simctl shutdown $target_sim_id
+      name: Preboot ${{ env.DEVICE_NAME }}
+    - run: brew install python@${PYTHON_VERSION}
     - run: |
         brew tap facebook/fb
-        # use 1.1.7 because xctest doesn't seem to work with 1.1.8 https://github.com/facebook/idb/issues/811
-        pushd /usr/local/Homebrew/Library/Taps/facebook/homebrew-fb
-        git checkout f660049bdec9965934973052e6331119a4985096
         brew install idb-companion || true
-        popd
-        /usr/local/opt/python@3.7/bin/python3.7 -m pip install --user fb-idb
+        /usr/local/opt/python@${PYTHON_VERSION}/bin/python${PYTHON_VERSION} -m pip install --user fb-idb
     - uses: actions/setup-node@v3
       with:
         node-version: lts/*
         check-latest: true
     - run: npm install
     - run: |
-        export PATH="${PATH}:$(/usr/local/opt/python@3.7/bin/python3.7 -c 'import site; print(site.USER_BASE)')/bin"
+        export PATH="${PATH}:$(/usr/local/opt/python@${PYTHON_VERSION}/bin/python${PYTHON_VERSION} -c 'import site; print(site.USER_BASE)')/bin"
         _FORCE_LOGS=1 npm run e2e-test

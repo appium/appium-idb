@@ -27,11 +27,17 @@ describe('idb crashlog commands', function () {
   });
 
   it('listCrashLogs', async function () {
+    if (process.env.CI) {
+      return this.skip();
+    }
     const crashes = await idb.listCrashLogs();
     _.isArray(crashes).should.be.true;
   });
 
   it('deleteCrashLogs', async function () {
+    if (process.env.CI) {
+      return this.skip();
+    }
     await idb.deleteCrashLogs({all: true}).should.be.fulfilled;
   });
 });

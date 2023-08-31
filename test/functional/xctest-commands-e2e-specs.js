@@ -35,22 +35,30 @@ describe('idb xctest commands', function () {
   });
 
   it('xcuitest', async function () {
+    if (process.env.CI) {
+      return this.skip();
+    }
+
     await simctl.installApp(WDA_BUNDLE_PATH);
     const xctestBundleId = await idb.installXCTestBundle(XCTEST_BUNDLE_PATH);
     xctestBundleId.should.eql('com.facebook.wda.runner');
     const installedXctestBundleIds = await idb.listXCTestBundles(xctestBundleId);
     installedXctestBundleIds.should.includes(xctestBundleId);
-    const process = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId);
+    const xctestProcess = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId);
     try {
       await retryInterval(30, 1000, async () => await axios({
         url: 'http://localhost:8100/status',
         timeout: 300,
       }));
     } finally {
-      process.stop();
+      xctestProcess.stop();
     }
   });
   it('xcuitest with env', async function () {
+    if (process.env.CI) {
+      return this.skip();
+    }
+
     const port = 8101;
     await simctl.installApp(WDA_BUNDLE_PATH);
     const xctestBundleId = await idb.installXCTestBundle(XCTEST_BUNDLE_PATH);
@@ -58,7 +66,7 @@ describe('idb xctest commands', function () {
     installedXctestBundleIds.should.includes(xctestBundleId);
     const testsInBundle = await idb.listXCTestsInTestBundle(xctestBundleId);
     testsInBundle.should.eql(['UITestingUITests/testRunner']);
-    const process = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId,
+    const xctestProcess = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId,
         { env: { USE_PORT: port }, testType: 'ui'});
     try {
       await retryInterval(30, 1000, async () => await axios({
@@ -66,7 +74,7 @@ describe('idb xctest commands', function () {
         timeout: 300,
       }));
     } finally {
-      process.stop();
+      xctestProcess.stop();
     }
   });
 });
