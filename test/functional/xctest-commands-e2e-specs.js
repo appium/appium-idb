@@ -35,6 +35,10 @@ describe('idb xctest commands', function () {
   });
 
   it('xcuitest', async function () {
+    if (process.env.CI) {
+      return this.skip();
+    }
+
     await simctl.installApp(WDA_BUNDLE_PATH);
     const xctestBundleId = await idb.installXCTestBundle(XCTEST_BUNDLE_PATH);
     xctestBundleId.should.eql('com.facebook.wda.runner');
@@ -51,6 +55,10 @@ describe('idb xctest commands', function () {
     }
   });
   it('xcuitest with env', async function () {
+    if (process.env.CI) {
+      return this.skip();
+    }
+
     const port = 8101;
     await simctl.installApp(WDA_BUNDLE_PATH);
     const xctestBundleId = await idb.installXCTestBundle(XCTEST_BUNDLE_PATH);

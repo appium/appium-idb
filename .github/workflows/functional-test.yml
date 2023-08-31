@@ -6,6 +6,7 @@ jobs:
   e2e:
     runs-on: macos-12
     env:
+      CI: true
       PLATFORM_VERSION: '16.0'
       XCODE_VERSION: '14.0'
       DEVICE_NAME: iPhone 11 Pro Max
