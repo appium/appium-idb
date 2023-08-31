@@ -1,3 +1,10 @@
+## [1.7.0](https://github.com/appium/appium-idb/compare/v1.6.16...v1.7.0) (2023-08-31)
+
+
+### Features
+
+* Switch babel to typescript ([#84](https://github.com/appium/appium-idb/issues/84)) ([68ebc60](https://github.com/appium/appium-idb/commit/68ebc605e6064643bea218b4c6cd8bb9c178255d))
+
 ## [1.6.16](https://github.com/appium/appium-idb/compare/v1.6.15...v1.6.16) (2023-08-28)
 
 
