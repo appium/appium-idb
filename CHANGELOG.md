@@ -1,3 +1,10 @@
+## [1.8.0](https://github.com/appium/appium-idb/compare/v1.7.0...v1.8.0) (2023-09-07)
+
+
+### Features
+
+* Add video-stream command support ([#87](https://github.com/appium/appium-idb/issues/87)) ([ebb0c48](https://github.com/appium/appium-idb/commit/ebb0c48330f52de701cb85ae691fc91a5c411135))
+
 ## [1.7.0](https://github.com/appium/appium-idb/compare/v1.6.16...v1.7.0) (2023-08-31)
 
 
