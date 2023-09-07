@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/appium/appium-idb/compare/v1.8.0...v1.8.1) (2023-09-07)
+
+
+### Miscellaneous Chores
+
+* Add more video recording options ([#88](https://github.com/appium/appium-idb/issues/88)) ([020c015](https://github.com/appium/appium-idb/commit/020c015c4bb8204e6fd8381435b3281ee4d38a17))
+
 ## [1.8.0](https://github.com/appium/appium-idb/compare/v1.7.0...v1.8.0) (2023-09-07)
 
 
