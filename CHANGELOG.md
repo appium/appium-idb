@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/appium/appium-idb/compare/v1.8.1...v1.8.2) (2023-09-07)
+
+
+### Bug Fixes
+
+* Make sure the streaming process is killed on falure ([605552e](https://github.com/appium/appium-idb/commit/605552ea342b4a792f92d75ed9060d75bcad6e4a))
+
 ## [1.8.1](https://github.com/appium/appium-idb/compare/v1.8.0...v1.8.1) (2023-09-07)
 
 
