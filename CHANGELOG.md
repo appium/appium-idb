@@ -1,3 +1,10 @@
+## [1.8.3](https://github.com/appium/appium-idb/compare/v1.8.2...v1.8.3) (2023-09-14)
+
+
+### Miscellaneous Chores
+
+* Bump @types/teen_process from 2.0.0 to 2.0.1 ([#90](https://github.com/appium/appium-idb/issues/90)) ([962406a](https://github.com/appium/appium-idb/commit/962406ab8f1f871f8f30f382dda8c89b4385c2c6))
+
 ## [1.8.2](https://github.com/appium/appium-idb/compare/v1.8.1...v1.8.2) (2023-09-07)
 
 
