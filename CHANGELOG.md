@@ -1,3 +1,10 @@
+## [1.8.4](https://github.com/appium/appium-idb/compare/v1.8.3...v1.8.4) (2023-10-19)
+
+
+### Miscellaneous Chores
+
+* Use latest types ([41f3b4c](https://github.com/appium/appium-idb/commit/41f3b4c6b6e19649d265f145917fff0d436e601f))
+
 ## [1.8.3](https://github.com/appium/appium-idb/compare/v1.8.2...v1.8.3) (2023-09-14)
 
 
