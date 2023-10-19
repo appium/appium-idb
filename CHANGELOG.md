@@ -1,3 +1,10 @@
+## [1.8.5](https://github.com/appium/appium-idb/compare/v1.8.4...v1.8.5) (2023-10-19)
+
+
+### Miscellaneous Chores
+
+* Use latest teen_process types ([929b7fd](https://github.com/appium/appium-idb/commit/929b7fda4d4eec1ce41e9d406a77ca7a7395bdde))
+
 ## [1.8.4](https://github.com/appium/appium-idb/compare/v1.8.3...v1.8.4) (2023-10-19)
 
 
