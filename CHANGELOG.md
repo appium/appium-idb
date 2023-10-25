@@ -1,3 +1,12 @@
+## [1.8.7](https://github.com/appium/appium-idb/compare/v1.8.6...v1.8.7) (2023-10-25)
+
+
+### Miscellaneous Chores
+
+* Bump eslint-config-prettier from 8.10.0 to 9.0.0 ([#102](https://github.com/appium/appium-idb/issues/102)) ([3f536e9](https://github.com/appium/appium-idb/commit/3f536e95643dc1c857a8a5536587a119d6b65750))
+* Bump lint-staged from 14.0.1 to 15.0.2 ([#100](https://github.com/appium/appium-idb/issues/100)) ([ab3e9f9](https://github.com/appium/appium-idb/commit/ab3e9f9e011ca91d193745505542b779b4f2fa88))
+* Bump semantic-release from 21.1.2 to 22.0.5 ([#94](https://github.com/appium/appium-idb/issues/94)) ([93e830a](https://github.com/appium/appium-idb/commit/93e830a52da7f43d471919c555bdced6e74f1acc))
+
 ## [1.8.6](https://github.com/appium/appium-idb/compare/v1.8.5...v1.8.6) (2023-10-25)
 
 
