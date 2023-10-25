@@ -1,3 +1,10 @@
+## [1.8.6](https://github.com/appium/appium-idb/compare/v1.8.5...v1.8.6) (2023-10-25)
+
+
+### Miscellaneous Chores
+
+* Bump @typescript-eslint/eslint-plugin from 5.62.0 to 6.9.0 ([#104](https://github.com/appium/appium-idb/issues/104)) ([d3d5cea](https://github.com/appium/appium-idb/commit/d3d5cea37b907d3e7c09fd13566dc97ce2d51854))
+
 ## [1.8.5](https://github.com/appium/appium-idb/compare/v1.8.4...v1.8.5) (2023-10-19)
 
 
