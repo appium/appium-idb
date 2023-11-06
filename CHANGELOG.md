@@ -1,3 +1,10 @@
+## [1.8.9](https://github.com/appium/appium-idb/compare/v1.8.8...v1.8.9) (2023-11-06)
+
+
+### Miscellaneous Chores
+
+* Bump @types/sinon from 10.0.20 to 17.0.0 ([#106](https://github.com/appium/appium-idb/issues/106)) ([7a1f7da](https://github.com/appium/appium-idb/commit/7a1f7da33dcd9a866cfa4ab8e4c9eb9d7ffab678))
+
 ## [1.8.8](https://github.com/appium/appium-idb/compare/v1.8.7...v1.8.8) (2023-11-01)
 
 
