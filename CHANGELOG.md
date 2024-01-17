@@ -1,3 +1,11 @@
+## [1.8.10](https://github.com/appium/appium-idb/compare/v1.8.9...v1.8.10) (2024-01-17)
+
+
+### Miscellaneous Chores
+
+* Bump semantic-release from 22.0.12 to 23.0.0 ([#111](https://github.com/appium/appium-idb/issues/111)) ([0446dff](https://github.com/appium/appium-idb/commit/0446dffa7fe35b5360b2fdef5a3413bc80256b80))
+* use latest lts for the publishment ([d393fae](https://github.com/appium/appium-idb/commit/d393fae06facb88e22d6f106ac19d65d1d3c9c50))
+
 ## [1.8.9](https://github.com/appium/appium-idb/compare/v1.8.8...v1.8.9) (2023-11-06)
 
 
