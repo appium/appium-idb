@@ -1,3 +1,10 @@
+## [1.8.11](https://github.com/appium/appium-idb/compare/v1.8.10...v1.8.11) (2024-03-07)
+
+
+### Miscellaneous Chores
+
+* bump typescript ([d592b84](https://github.com/appium/appium-idb/commit/d592b84cd96ef436b3e1a239d3ef18dce5effff2))
+
 ## [1.8.10](https://github.com/appium/appium-idb/compare/v1.8.9...v1.8.10) (2024-01-17)
 
 
