@@ -1,3 +1,10 @@
+## [1.8.12](https://github.com/appium/appium-idb/compare/v1.8.11...v1.8.12) (2024-04-09)
+
+
+### Miscellaneous Chores
+
+* Bump @typescript-eslint/parser from 6.21.0 to 7.6.0 ([#123](https://github.com/appium/appium-idb/issues/123)) ([eb54be0](https://github.com/appium/appium-idb/commit/eb54be0e4c06901893fa9be983077c91b949903d))
+
 ## [1.8.11](https://github.com/appium/appium-idb/compare/v1.8.10...v1.8.11) (2024-03-07)
 
 
