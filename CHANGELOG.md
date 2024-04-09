@@ -1,3 +1,10 @@
+## [1.8.13](https://github.com/appium/appium-idb/compare/v1.8.12...v1.8.13) (2024-04-09)
+
+
+### Miscellaneous Chores
+
+* Remove extra imports ([fc76d22](https://github.com/appium/appium-idb/commit/fc76d22363b51b1a3a72dd95af4b8f0ca67e0534))
+
 ## [1.8.12](https://github.com/appium/appium-idb/compare/v1.8.11...v1.8.12) (2024-04-09)
 
 
