@@ -1,3 +1,10 @@
+## [1.8.14](https://github.com/appium/appium-idb/compare/v1.8.13...v1.8.14) (2024-05-16)
+
+
+### Miscellaneous Chores
+
+* Update dev dependencies ([2b29b4f](https://github.com/appium/appium-idb/commit/2b29b4fadb85eeeb58a7dfdb4bdd6b14b1977474))
+
 ## [1.8.13](https://github.com/appium/appium-idb/compare/v1.8.12...v1.8.13) (2024-04-09)
 
 
