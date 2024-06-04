@@ -72,7 +72,7 @@
     "axios": "^1.x",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
-    "conventional-changelog-conventionalcommits": "^7.0.1",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
     "mocha": "^10.0.0",
     "node-simctl": "^7.0.1",
     "prettier": "^3.0.0",
