@@ -1,3 +1,9 @@
+## [1.8.15](https://github.com/appium/appium-idb/compare/v1.8.14...v1.8.15) (2024-06-04)
+
+### Miscellaneous Chores
+
+* Bump semantic-release from 23.1.1 to 24.0.0 and conventional-changelog-conventionalcommits to 8.0.0 ([#126](https://github.com/appium/appium-idb/issues/126)) ([22b6a9a](https://github.com/appium/appium-idb/commit/22b6a9a0b5f5b6ef9315e940ac77ead70d6ba03f))
+
 ## [1.8.14](https://github.com/appium/appium-idb/compare/v1.8.13...v1.8.14) (2024-05-16)
 
 
