@@ -1,23 +1,24 @@
 import _ from 'lodash';
-import chai from 'chai';
-import chaiAsPromised from 'chai-as-promised';
 import {
   prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS
 } from '../helpers/device-helpers';
 import IDB from '../../lib/idb';
 import { waitForCondition } from 'asyncbox';
 
-
 const MAPS_BUNDLE_ID = 'com.apple.Maps';
-
-chai.should();
-chai.use(chaiAsPromised);
 
 describe('idb app commands', function () {
   let idb;
   let simctl;
+  let chai;
 
   before(async function () {
+    chai = await import('chai');
+    const chaiAsPromised = await import('chai-as-promised');
+
+    chai.should();
+    chai.use(chaiAsPromised.default);
+
     simctl = await prepareDevice();
     idb = new IDB({
       udid: simctl.udid,

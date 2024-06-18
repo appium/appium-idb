@@ -1,16 +1,10 @@
-import chai from 'chai';
 import path from 'path';
-import chaiAsPromised from 'chai-as-promised';
 import axios from 'axios';
 import {
   prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS
 } from '../helpers/device-helpers';
 import IDB from '../../lib/idb';
 import { retryInterval } from 'asyncbox';
-
-
-chai.should();
-chai.use(chaiAsPromised);
 
 const WDA_BUNDLE_ID = 'com.facebook.WebDriverAgentRunner.xctrunner';
 const WDA_BUNDLE_PATH = path.resolve(__dirname, '..', 'asset', 'WebDriverAgentRunner-Runner.app');
@@ -20,8 +14,15 @@ const SAFARI_BUNDLE_ID = 'com.apple.mobilesafari';
 describe('idb xctest commands', function () {
   let simctl;
   let idb;
+  let chai;
 
   before(async function () {
+    chai = await import('chai');
+    const chaiAsPromised = await import('chai-as-promised');
+
+    chai.should();
+    chai.use(chaiAsPromised.default);
+
     simctl = await prepareDevice();
     idb = new IDB({
       udid: simctl.udid,
