@@ -1,3 +1,9 @@
+## [1.8.17](https://github.com/appium/appium-idb/compare/v1.8.16...v1.8.17) (2024-06-19)
+
+### Miscellaneous Chores
+
+* Bump chai and chai-as-promised ([#130](https://github.com/appium/appium-idb/issues/130)) ([e7580bd](https://github.com/appium/appium-idb/commit/e7580bd11d5b7732678d0d01c035ce96ecb877e6))
+
 ## [1.8.16](https://github.com/appium/appium-idb/compare/v1.8.15...v1.8.16) (2024-06-12)
 
 ### Miscellaneous Chores
