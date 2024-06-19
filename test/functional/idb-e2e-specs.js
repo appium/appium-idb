@@ -9,12 +9,13 @@ async function assertDeviceDescription(idb, udid) {
 describe('idb general', function () {
   let simctl;
   let chai;
+  let should;
 
   before(async function () {
     chai = await import('chai');
     const chaiAsPromised = await import('chai-as-promised');
 
-    chai.should();
+    should = chai.should();
     chai.use(chaiAsPromised.default);
 
     simctl = await prepareDevice({
