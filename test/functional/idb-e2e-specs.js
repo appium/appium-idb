@@ -1,10 +1,5 @@
-import chai from 'chai';
-import chaiAsPromised from 'chai-as-promised';
 import {prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS} from '../helpers/device-helpers';
 import IDB from '../../lib/idb';
-
-const should = chai.should();
-chai.use(chaiAsPromised);
 
 async function assertDeviceDescription(idb, udid) {
   const info = await idb.describeDevice();
@@ -13,8 +8,16 @@ async function assertDeviceDescription(idb, udid) {
 
 describe('idb general', function () {
   let simctl;
+  let chai;
+  let should;
 
   before(async function () {
+    chai = await import('chai');
+    const chaiAsPromised = await import('chai-as-promised');
+
+    should = chai.should();
+    chai.use(chaiAsPromised.default);
+
     simctl = await prepareDevice({
       prebooted: false,
     });

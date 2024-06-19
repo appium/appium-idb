@@ -1,14 +1,19 @@
-import chai from 'chai';
-import chaiAsPromised from 'chai-as-promised';
 import {
   fixOutputToArray, convertToIDBEnv
 } from '../../lib/helpers';
 import _ from 'lodash';
 
-chai.should();
-chai.use(chaiAsPromised);
-
 describe('helpers', function () {
+  let chai;
+
+  before(async function () {
+    chai = await import('chai');
+    const chaiAsPromised = await import('chai-as-promised');
+
+    chai.should();
+    chai.use(chaiAsPromised.default);
+  });
+
   describe('fixOutputToArray', function () {
     it('should properly fix the valid output', function () {
       const result = fixOutputToArray(`
