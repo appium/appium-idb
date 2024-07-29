@@ -1,3 +1,9 @@
+## [1.8.19](https://github.com/appium/appium-idb/compare/v1.8.18...v1.8.19) (2024-07-29)
+
+### Miscellaneous Chores
+
+* Bump @types/node from 20.14.13 to 22.0.0 ([#131](https://github.com/appium/appium-idb/issues/131)) ([7f33754](https://github.com/appium/appium-idb/commit/7f337548672ec4df4c830876976810e449a3f178))
+
 ## [1.8.18](https://github.com/appium/appium-idb/compare/v1.8.17...v1.8.18) (2024-07-09)
 
 ### Miscellaneous Chores
