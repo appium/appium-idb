@@ -2,14 +2,16 @@ name: Functional Tests
 
 on: [pull_request]
 
+# https://github.com/actions/runner-images/tree/main/images/macos
+
 jobs:
   e2e:
-    runs-on: macos-12
+    runs-on: macos-14
     env:
       CI: true
-      PLATFORM_VERSION: '16.0'
-      XCODE_VERSION: '14.0'
-      DEVICE_NAME: iPhone 11 Pro Max
+      PLATFORM_VERSION: '17.5'
+      XCODE_VERSION: '15.4'
+      DEVICE_NAME: iPhone 14
       PYTHON_VERSION: '3.9'
 
     steps:
@@ -19,7 +21,6 @@ jobs:
         xcode-version: ${{ env.XCODE_VERSION }}
     - uses: futureware-tech/simulator-action@v3
       with:
-        # https://github.com/actions/runner-images/blob/main/images/macos/macos-14-arm64-Readme.md
         model: ${{ env.DEVICE_NAME }}
         os_version: ${{ env.PLATFORM_VERSION }}
     - run: brew install python@${PYTHON_VERSION}
