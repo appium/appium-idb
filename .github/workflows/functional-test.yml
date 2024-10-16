@@ -36,5 +36,5 @@ jobs:
         check-latest: true
     - run: npm install
     - run: |
-        export PATH="${PATH}:$(/usr/local/opt/python@${PYTHON_VERSION}/bin/python${PYTHON_VERSION} -c 'import site; print(site.USER_BASE)')/bin"
+        export PATH="${PATH}:python${PYTHON_VERSION} -c 'import site; print(site.USER_BASE)')/bin"
         _FORCE_LOGS=1 npm run e2e-test
