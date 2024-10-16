@@ -11,7 +11,7 @@ jobs:
       CI: true
       PLATFORM_VERSION: '17.5'
       XCODE_VERSION: '15.4'
-      DEVICE_NAME: iPhone 14
+      DEVICE_NAME: 'iPhone 15'
       PYTHON_VERSION: '3.9'
 
     steps:
