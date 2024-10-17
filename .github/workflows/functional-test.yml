@@ -2,36 +2,43 @@ name: Functional Tests
 
 on: [pull_request]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+# https://github.com/actions/runner-images/tree/main/images/macos
+
 jobs:
   e2e:
-    runs-on: macos-12
+    runs-on: macos-14
     env:
       CI: true
-      PLATFORM_VERSION: '16.0'
-      XCODE_VERSION: '14.0'
-      DEVICE_NAME: iPhone 11 Pro Max
+      PLATFORM_VERSION: '17.5'
+      XCODE_VERSION: '15.4'
+      DEVICE_NAME: 'iPhone 15'
       PYTHON_VERSION: '3.9'
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - uses: maxim-lobanov/setup-xcode@v1
       with:
         xcode-version: ${{ env.XCODE_VERSION }}
     - uses: futureware-tech/simulator-action@v3
       with:
-        # https://github.com/actions/runner-images/blob/main/images/macos/macos-14-arm64-Readme.md
         model: ${{ env.DEVICE_NAME }}
         os_version: ${{ env.PLATFORM_VERSION }}
-    - run: brew install python@${PYTHON_VERSION}
+    - uses: actions/setup-python@v5
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
     - run: |
         brew tap facebook/fb
         brew install idb-companion || true
-        /usr/local/opt/python@${PYTHON_VERSION}/bin/python${PYTHON_VERSION} -m pip install --user fb-idb
+        python${PYTHON_VERSION} -m pip install --user fb-idb
     - uses: actions/setup-node@v3
       with:
         node-version: lts/*
         check-latest: true
     - run: npm install
     - run: |
-        export PATH="${PATH}:$(/usr/local/opt/python@${PYTHON_VERSION}/bin/python${PYTHON_VERSION} -c 'import site; print(site.USER_BASE)')/bin"
+        export PATH="${PATH}:$(python${PYTHON_VERSION} -c 'import site; print(site.USER_BASE)')/bin"
         _FORCE_LOGS=1 npm run e2e-test
