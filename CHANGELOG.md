@@ -1,3 +1,9 @@
+## [1.8.20](https://github.com/appium/appium-idb/compare/v1.8.19...v1.8.20) (2024-12-03)
+
+### Miscellaneous Chores
+
+* Bump mocha from 10.8.2 to 11.0.1 ([#133](https://github.com/appium/appium-idb/issues/133)) ([aa3711e](https://github.com/appium/appium-idb/commit/aa3711eb6fc3aa59dca6320391346970a703bfbe))
+
 ## [1.8.19](https://github.com/appium/appium-idb/compare/v1.8.18...v1.8.19) (2024-07-29)
 
 ### Miscellaneous Chores
