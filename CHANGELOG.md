@@ -1,3 +1,9 @@
+## [1.8.21](https://github.com/appium/appium-idb/compare/v1.8.20...v1.8.21) (2024-12-06)
+
+### Miscellaneous Chores
+
+* Bump @appium/support from 5.1.8 to 6.0.0 ([#134](https://github.com/appium/appium-idb/issues/134)) ([4d3e265](https://github.com/appium/appium-idb/commit/4d3e265c7e3be4b04bb1667027f737b02a8e8b79))
+
 ## [1.8.20](https://github.com/appium/appium-idb/compare/v1.8.19...v1.8.20) (2024-12-03)
 
 ### Miscellaneous Chores
