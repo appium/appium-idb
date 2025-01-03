@@ -2,7 +2,7 @@ import _ from 'lodash';
 import {
   prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS
 } from '../helpers/device-helpers';
-import IDB from '../../lib/idb';
+import { IDB } from '../../lib/idb';
 import { waitForCondition } from 'asyncbox';
 
 const MAPS_BUNDLE_ID = 'com.apple.Maps';
@@ -63,7 +63,7 @@ describe('idb app commands', function () {
     const terminateMapsApp = async () => {
       try {
         await idb.terminateApp(MAPS_BUNDLE_ID);
-      } catch (ign) {}
+      } catch {}
     };
     await terminateMapsApp();
     const appProc = await idb.launchApp(MAPS_BUNDLE_ID, {
