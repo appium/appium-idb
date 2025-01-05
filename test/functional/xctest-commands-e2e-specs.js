@@ -3,7 +3,7 @@ import axios from 'axios';
 import {
   prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS
 } from '../helpers/device-helpers';
-import IDB from '../../lib/idb';
+import { IDB } from '../../lib/idb';
 import { retryInterval } from 'asyncbox';
 
 const WDA_BUNDLE_ID = 'com.facebook.WebDriverAgentRunner.xctrunner';

@@ -2,7 +2,7 @@ import _ from 'lodash';
 import {
   prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS
 } from '../helpers/device-helpers';
-import IDB from '../../lib/idb';
+import { IDB } from '../../lib/idb';
 
 describe('idb crashlog commands', function () {
   let idb;

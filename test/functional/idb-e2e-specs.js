@@ -1,5 +1,5 @@
 import {prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS} from '../helpers/device-helpers';
-import IDB from '../../lib/idb';
+import { IDB } from '../../lib/idb';
 
 async function assertDeviceDescription(idb, udid) {
   const info = await idb.describeDevice();
@@ -42,7 +42,7 @@ describe('idb general', function () {
       await idb.disconnect();
       try {
         await simctl.shutdownDevice();
-      } catch (ign) {}
+      } catch {}
     });
 
     it('should be able to call connect/disconnect multiple times', async function () {
@@ -66,12 +66,12 @@ describe('idb general', function () {
     beforeEach(async function () {
       try {
         await idb.connect();
-      } catch (e) {}
+      } catch {}
     });
     afterEach(async function () {
       try {
         await idb.disconnect();
-      } catch (e) {}
+      } catch {}
     });
 
     it('should be able to call connect multiple times', async function () {
