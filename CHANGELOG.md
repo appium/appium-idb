@@ -1,3 +1,9 @@
+## [1.8.22](https://github.com/appium/appium-idb/compare/v1.8.21...v1.8.22) (2025-01-05)
+
+### Miscellaneous Chores
+
+* Bump @appium/eslint-config-appium-ts from 0.3.3 to 1.0.1 ([#135](https://github.com/appium/appium-idb/issues/135)) ([b9abb48](https://github.com/appium/appium-idb/commit/b9abb48b862e876b9de62893c2ecfc6175ace0b9))
+
 ## [1.8.21](https://github.com/appium/appium-idb/compare/v1.8.20...v1.8.21) (2024-12-06)
 
 ### Miscellaneous Chores
