@@ -1,3 +1,9 @@
+## [1.8.23](https://github.com/appium/appium-idb/compare/v1.8.22...v1.8.23) (2025-05-21)
+
+### Miscellaneous Chores
+
+* Bump conventional-changelog-conventionalcommits ([#137](https://github.com/appium/appium-idb/issues/137)) ([2b7b0e9](https://github.com/appium/appium-idb/commit/2b7b0e9ecc93bdcac705e3e14d4e4c8a83876355))
+
 ## [1.8.22](https://github.com/appium/appium-idb/compare/v1.8.21...v1.8.22) (2025-01-05)
 
 ### Miscellaneous Chores
