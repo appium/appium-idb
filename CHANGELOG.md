@@ -1,3 +1,14 @@
+## [2.0.0](https://github.com/appium/appium-idb/compare/v1.8.24...v2.0.0) (2025-08-16)
+
+### ⚠ BREAKING CHANGES
+
+* Required Node.js version has been bumped to ^20.19.0 || ^22.12.0 || >=24.0.0
+* Required npm version has been bumped to >=10
+
+### Features
+
+* Bump Node.js version ([#139](https://github.com/appium/appium-idb/issues/139)) ([5fdbe77](https://github.com/appium/appium-idb/commit/5fdbe774bd8a4208754ed57e191874208520d1ad))
+
 ## [1.8.24](https://github.com/appium/appium-idb/compare/v1.8.23...v1.8.24) (2025-06-10)
 
 ### Miscellaneous Chores
