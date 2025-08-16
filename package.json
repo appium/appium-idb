@@ -15,8 +15,8 @@
     "url": "https://github.com/appium/appium-idb/issues"
   },
   "engines": {
-    "node": ">=14",
-    "npm": ">=8"
+    "node": "^20.19.0 || ^22.12.0 || >=24.0.0",
+    "npm": ">=10"
   },
   "prettier": {
     "bracketSpacing": false,
@@ -36,12 +36,12 @@
     "CHANGELOG.md"
   ],
   "dependencies": {
-    "@appium/support": "^6.0.0",
+    "@appium/support": "^7.0.0-rc.1",
     "asyncbox": "^3.0.0",
     "bluebird": "^3.1.1",
     "lodash": "^4.0.0",
     "source-map-support": "^0.x",
-    "teen_process": "^2.0.1"
+    "teen_process": "^3.0.0"
   },
   "scripts": {
     "build": "tsc -b",
@@ -54,9 +54,9 @@
     "e2e-test": "mocha --exit --timeout 5m \"./test/functional/**/*-specs.js\""
   },
   "devDependencies": {
-    "@appium/eslint-config-appium-ts": "^1.x",
-    "@appium/tsconfig": "^0.x",
-    "@appium/types": "^0.x",
+    "@appium/eslint-config-appium-ts": "^2.0.0-rc.1",
+    "@appium/tsconfig": "^1.0.0-rc.1",
+    "@appium/types": "^1.0.0-rc.1",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@types/bluebird": "^3.5.38",
@@ -69,7 +69,7 @@
     "chai-as-promised": "^8.0.0",
     "conventional-changelog-conventionalcommits": "^9.0.0",
     "mocha": "^11.0.1",
-    "node-simctl": "^7.0.1",
+    "node-simctl": "^8.0.0",
     "prettier": "^3.0.0",
     "semantic-release": "^24.0.0",
     "ts-node": "^10.9.1",
