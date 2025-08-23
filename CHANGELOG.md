@@ -1,3 +1,9 @@
+## [2.0.1](https://github.com/appium/appium-idb/compare/v2.0.0...v2.0.1) (2025-08-23)
+
+### Miscellaneous Chores
+
+* Bump chai from 5.3.2 to 6.0.0 ([#140](https://github.com/appium/appium-idb/issues/140)) ([1d80cfc](https://github.com/appium/appium-idb/commit/1d80cfc45deb893732ca2cabdac8bc65ef12d4c6))
+
 ## [2.0.0](https://github.com/appium/appium-idb/compare/v1.8.24...v2.0.0) (2025-08-16)
 
 ### ⚠ BREAKING CHANGES
