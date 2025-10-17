@@ -1,3 +1,9 @@
+## [2.0.2](https://github.com/appium/appium-idb/compare/v2.0.1...v2.0.2) (2025-10-17)
+
+### Miscellaneous Chores
+
+* Bump semantic-release from 24.2.9 to 25.0.0 ([#141](https://github.com/appium/appium-idb/issues/141)) ([99ecee4](https://github.com/appium/appium-idb/commit/99ecee4ccc5fabd2da1f5e78f0de98702a5e6582))
+
 ## [2.0.1](https://github.com/appium/appium-idb/compare/v2.0.0...v2.0.1) (2025-08-23)
 
 ### Miscellaneous Chores
