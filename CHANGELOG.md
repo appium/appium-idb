@@ -1,3 +1,9 @@
+## [2.0.3](https://github.com/appium/appium-idb/compare/v2.0.2...v2.0.3) (2025-11-15)
+
+### Miscellaneous Chores
+
+* publish via trusted publisher ([#142](https://github.com/appium/appium-idb/issues/142)) ([4a848a0](https://github.com/appium/appium-idb/commit/4a848a06a13e409c98ffeede531481c4bd82a58f))
+
 ## [2.0.2](https://github.com/appium/appium-idb/compare/v2.0.1...v2.0.2) (2025-10-17)
 
 ### Miscellaneous Chores
