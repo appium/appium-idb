@@ -1,3 +1,9 @@
+## [2.0.4](https://github.com/appium/appium-idb/compare/v2.0.3...v2.0.4) (2025-12-12)
+
+### Miscellaneous Chores
+
+* **deps:** remove source-map-support ([#145](https://github.com/appium/appium-idb/issues/145)) ([c8a72a6](https://github.com/appium/appium-idb/commit/c8a72a688bc2336b5a252c2f777282ce0a02b862))
+
 ## [2.0.3](https://github.com/appium/appium-idb/compare/v2.0.2...v2.0.3) (2025-11-15)
 
 ### Miscellaneous Chores
