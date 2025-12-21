@@ -1,3 +1,9 @@
+## [2.0.7](https://github.com/appium/appium-idb/compare/v2.0.6...v2.0.7) (2025-12-21)
+
+### Miscellaneous Chores
+
+* bump teen_process ([#147](https://github.com/appium/appium-idb/issues/147)) ([150ceae](https://github.com/appium/appium-idb/commit/150ceaed6e65f241a653586b7dacdc0149157182))
+
 ## [2.0.6](https://github.com/appium/appium-idb/compare/v2.0.5...v2.0.6) (2025-12-18)
 
 ### Miscellaneous Chores
