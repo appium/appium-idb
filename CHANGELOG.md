@@ -1,3 +1,9 @@
+## [2.0.8](https://github.com/appium/appium-idb/compare/v2.0.7...v2.0.8) (2026-01-31)
+
+### Miscellaneous Chores
+
+* Bump asyncbox from 4.1.1 to 6.1.0 ([#152](https://github.com/appium/appium-idb/issues/152)) ([8eb8ba5](https://github.com/appium/appium-idb/commit/8eb8ba55420c91c728714dc9238a0dd4339f766d))
+
 ## [2.0.7](https://github.com/appium/appium-idb/compare/v2.0.6...v2.0.7) (2025-12-21)
 
 ### Miscellaneous Chores
