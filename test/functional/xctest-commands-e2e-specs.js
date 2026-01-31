@@ -1,4 +1,4 @@
-import path from 'path';
+import path from 'node:path';
 import axios from 'axios';
 import {
   prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS
