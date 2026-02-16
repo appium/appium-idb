@@ -4,7 +4,7 @@
   "keywords": [
     "appium"
   ],
-  "version": "2.0.8",
+  "version": "2.0.9",
   "author": "appium",
   "license": "Apache-2.0",
   "repository": {
@@ -52,8 +52,8 @@
     "test": "mocha --exit --timeout 1m \"./test/unit/**/*-specs.js\"",
     "e2e-test": "mocha --exit --timeout 5m \"./test/functional/**/*-specs.js\"",
     "format": "prettier -w ./lib ./test",
-    "format:check": "prettier --check ./lib ./test" 
- },
+    "format:check": "prettier --check ./lib ./test"
+  },
   "devDependencies": {
     "@appium/eslint-config-appium-ts": "^2.0.0-rc.1",
     "@appium/tsconfig": "^1.0.0-rc.1",

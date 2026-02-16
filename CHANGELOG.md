@@ -1,3 +1,9 @@
+## [2.0.9](https://github.com/appium/appium-idb/compare/v2.0.8...v2.0.9) (2026-02-16)
+
+### Bug Fixes
+
+* format ([#153](https://github.com/appium/appium-idb/issues/153)) ([82e37f5](https://github.com/appium/appium-idb/commit/82e37f5372f651982cf76ae1ba0912bef026ec77))
+
 ## [2.0.8](https://github.com/appium/appium-idb/compare/v2.0.7...v2.0.8) (2026-01-31)
 
 ### Miscellaneous Chores
