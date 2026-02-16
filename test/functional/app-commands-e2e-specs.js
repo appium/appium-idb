@@ -1,9 +1,7 @@
 import _ from 'lodash';
-import {
-  prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS
-} from '../helpers/device-helpers';
-import { IDB } from '../../lib/idb';
-import { waitForCondition } from 'asyncbox';
+import {prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS} from '../helpers/device-helpers';
+import {IDB} from '../../lib/idb';
+import {waitForCondition} from 'asyncbox';
 
 const MAPS_BUNDLE_ID = 'com.apple.Maps';
 
@@ -38,11 +36,8 @@ describe('idb app commands', function () {
     mapsInfo.install_type.should.eql('system');
   });
 
-  async function isMapsAppRunning () {
-    const {stdout} = await simctl.spawnProcess([
-      'launchctl',
-      'list',
-    ]);
+  async function isMapsAppRunning() {
+    const {stdout} = await simctl.spawnProcess(['launchctl', 'list']);
     return stdout.includes(`UIKitApplication:${MAPS_BUNDLE_ID}`);
   }
 
@@ -53,7 +48,7 @@ describe('idb app commands', function () {
       intervalMs: 500,
     });
     await idb.terminateApp(MAPS_BUNDLE_ID).should.be.fulfilled;
-    await waitForCondition(async () => !await isMapsAppRunning(), {
+    await waitForCondition(async () => !(await isMapsAppRunning()), {
       waitMs: 5000,
       intervalMs: 500,
     });
@@ -77,7 +72,7 @@ describe('idb app commands', function () {
       });
 
       await appProc.stop('SIGINT');
-      await waitForCondition(async () => !await isMapsAppRunning(), {
+      await waitForCondition(async () => !(await isMapsAppRunning()), {
         waitMs: 5000,
         intervalMs: 500,
       });
