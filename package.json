@@ -50,8 +50,10 @@
     "lint:fix": "npm run lint -- --fix",
     "prepare": "npm run build",
     "test": "mocha --exit --timeout 1m \"./test/unit/**/*-specs.js\"",
-    "e2e-test": "mocha --exit --timeout 5m \"./test/functional/**/*-specs.js\""
-  },
+    "e2e-test": "mocha --exit --timeout 5m \"./test/functional/**/*-specs.js\"",
+    "format": "prettier -w ./lib ./test",
+    "format:check": "prettier --check ./lib ./test" 
+ },
   "devDependencies": {
     "@appium/eslint-config-appium-ts": "^2.0.0-rc.1",
     "@appium/tsconfig": "^1.0.0-rc.1",

@@ -1,6 +1,4 @@
-import {
-  fixOutputToArray, convertToIDBEnv
-} from '../../lib/helpers';
+import {fixOutputToArray, convertToIDBEnv} from '../../lib/helpers';
 import _ from 'lodash';
 
 describe('helpers', function () {

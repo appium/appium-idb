@@ -1,10 +1,8 @@
 import path from 'path';
 import axios from 'axios';
-import {
-  prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS
-} from '../helpers/device-helpers';
-import { IDB } from '../../lib/idb';
-import { retryInterval } from 'asyncbox';
+import {prepareDevice, deleteDevice, ONLINE_TIMEOUT_MS} from '../helpers/device-helpers';
+import {IDB} from '../../lib/idb';
+import {retryInterval} from 'asyncbox';
 
 const WDA_BUNDLE_ID = 'com.facebook.WebDriverAgentRunner.xctrunner';
 const WDA_BUNDLE_PATH = path.resolve(__dirname, '..', 'asset', 'WebDriverAgentRunner-Runner.app');
@@ -47,10 +45,15 @@ describe('idb xctest commands', function () {
     installedXctestBundleIds.should.includes(xctestBundleId);
     const xctestProcess = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId);
     try {
-      await retryInterval(30, 1000, async () => await axios({
-        url: 'http://localhost:8100/status',
-        timeout: 300,
-      }));
+      await retryInterval(
+        30,
+        1000,
+        async () =>
+          await axios({
+            url: 'http://localhost:8100/status',
+            timeout: 300,
+          }),
+      );
     } finally {
       xctestProcess.stop();
     }
@@ -67,13 +70,20 @@ describe('idb xctest commands', function () {
     installedXctestBundleIds.should.includes(xctestBundleId);
     const testsInBundle = await idb.listXCTestsInTestBundle(xctestBundleId);
     testsInBundle.should.eql(['UITestingUITests/testRunner']);
-    const xctestProcess = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId,
-        { env: { USE_PORT: port }, testType: 'ui'});
+    const xctestProcess = await idb.runXCUITest(WDA_BUNDLE_ID, SAFARI_BUNDLE_ID, xctestBundleId, {
+      env: {USE_PORT: port},
+      testType: 'ui',
+    });
     try {
-      await retryInterval(30, 1000, async () => await axios({
-        url: `http://localhost:${port}/status`,
-        timeout: 300,
-      }));
+      await retryInterval(
+        30,
+        1000,
+        async () =>
+          await axios({
+            url: `http://localhost:${port}/status`,
+            timeout: 300,
+          }),
+      );
     } finally {
       xctestProcess.stop();
     }
