@@ -1,3 +1,9 @@
+## [2.0.10](https://github.com/appium/appium-idb/compare/v2.0.9...v2.0.10) (2026-03-10)
+
+### Miscellaneous Chores
+
+* Bump @appium/eslint-config-appium-ts from 2.0.5 to 3.0.0 ([#151](https://github.com/appium/appium-idb/issues/151)) ([5c2d716](https://github.com/appium/appium-idb/commit/5c2d716cbc379d94f25b816311d2c3462cebdb05))
+
 ## [2.0.9](https://github.com/appium/appium-idb/compare/v2.0.8...v2.0.9) (2026-02-16)
 
 ### Bug Fixes
