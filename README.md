@@ -1,6 +1,12 @@
 appium-idb
 ===================
 
+> [!WARNING]
+> **Deprecated:** `appium-idb` is no longer actively maintained.
+> The upstream `fb-idb` stack is not maintained well, and Appium is moving to homegrown,
+> properly maintained clients for private Apple APIs (like,
+> [`appium-ios-remotexpc`](https://github.com/appium/appium-ios-remotexpc)).
+
 appium-idb is NodeJS wrapper over iOS Device Bridge (idb) set of utilities made by Facebook. Read https://www.fbidb.io for more details.
 
 
